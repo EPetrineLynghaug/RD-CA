@@ -11,7 +11,7 @@ body {
 }
 
 header, main, footer {
-    padding: 20px;
+    /*padding: 20px;/**/
     border: 1px solid #ccc;
     font-family: "Helvetica", Arial, sans-serif;
 }
@@ -37,8 +37,7 @@ h1,h2,h3{
     text-align: center;
 }
 
-/* mobilskjerm */
-@media screen and (max-width: 480px) {
+
     .product {
         display: flex;
         flex-wrap: wrap;
@@ -46,7 +45,7 @@ h1,h2,h3{
     }
 
     .polaroid {
-        width: 80%;
+        width: 60%;
         background-color: white;
         box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2),
         0 6px 20px 0 rgba(0, 0, 0, 0.15);
@@ -73,7 +72,7 @@ h1,h2,h3{
         right: 20px;
         font-size: 2em;
         z-index: 1;
-        margin-top: 20px;
+        margin-top: 10px;
     }
 
     .meny {
@@ -122,14 +121,16 @@ h1,h2,h3{
     .logo img{
         max-width: 20%;
         height: auto;
-        margin-top: 20px;
+        margin-top: 10px;
+        padding: 10px;
        
         }
     .hero img{
         width: 100%;
         height: auto;
+        
     }
-}
+
 
 /* Stiler for større skjermer */
 @media screen and (min-width: 481px) {
