@@ -125,9 +125,12 @@ h1,h2,h3{
         padding: 10px;
        
         }
-    .hero img{
+    .hero{
         width: 100%;
-        height: auto;
+        height: 200px;
+        background-image: url("../media/herobilde.JPG");
+        background-size: cover;
+        background-repeat: no-repeat;
         
     }
 
