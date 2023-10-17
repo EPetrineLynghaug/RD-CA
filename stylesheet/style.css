@@ -1,0 +1,144 @@
+/* Generelle stiler */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    height: 100vh;
+}
+
+header, main, footer {
+    padding: 20px;
+    border: 1px solid #ccc;
+    font-family: "Helvetica", Arial, sans-serif;
+}
+
+header {
+    grid-row: 1;
+    background-color: #bdedf8;
+    color: black;
+}
+
+main {
+    grid-row: 2;
+    background-color: #fafafa;
+    color: rgb(5, 5, 5);
+}
+
+footer {
+    grid-row: 3;
+    background-color: black;
+    color: white;
+}
+h1,h2,h3{
+    text-align: center;
+}
+
+/* Stiler for mobilskjerm */
+@media screen and (max-width: 480px) {
+    .product {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .polaroid {
+        width: 80%;
+        background-color: white;
+        box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.15);
+        margin: 10px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Hamburger-ikonet på høyre side */
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 2em;
+        z-index: 1;
+        margin-top: 20px;
+    }
+
+    .meny {
+        display: none;
+        position: fixed;
+        top: 60px;
+        right: 20px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        z-index: 1;
+    }
+
+    #hamburger-menu:checked + .meny {
+        display: block;
+    }
+    #hamburger-menu{
+        display: none;
+    }
+
+    /* Legg til stiler for menylisten her */
+    .menu-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu-item {
+        margin-bottom: 5px;
+    }
+
+    .menu-item a {
+        text-decoration: none;
+        color: black;
+        padding: 5px 10px;
+        display: block;
+        text-align: center;
+    }
+
+    .menu-item a:hover {
+        color: white;
+        background: black;
+    }
+    /*Bilderedigering*/
+    .logo img{
+        max-width: 20%;
+        height: auto;
+        margin-top: 20px;
+       
+        }
+    .hero img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Stiler for større skjermer */
+@media screen and (min-width: 481px) {
+    .menu-icon {
+        display: none;
+    }
+
+    .meny {
+        display: block;
+    }
+}
+
