@@ -95,7 +95,7 @@ h1,h2,h3{
         display: none;
     }
 
-    /* Legg til stiler for menylisten her */
+    /* menylisten her*/
     .menu-list {
         list-style-type: none;
         padding: 0;
@@ -118,7 +118,7 @@ h1,h2,h3{
         color: white;
         background: black;
     }
-    /*Bilderedigering*/
+    /*Bilder*/
     .logo img{
         max-width: 20%;
         height: auto;
