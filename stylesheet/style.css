@@ -1,4 +1,4 @@
-/* Generelle stiler */
+
 * {
     margin: 0;
     padding: 0;
@@ -37,7 +37,7 @@ h1,h2,h3{
     text-align: center;
 }
 
-/* Stiler for mobilskjerm */
+/* mobilskjerm */
 @media screen and (max-width: 480px) {
     .product {
         display: flex;
