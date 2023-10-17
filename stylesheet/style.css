@@ -38,6 +38,11 @@ h1,h2,h3{
     text-align: center;
 }
 
+#bestselgere{
+    margin-top: 10px;
+    color: #0A3641;
+}
+
 
     .product {
         display: flex;
@@ -57,6 +62,7 @@ h1,h2,h3{
         justify-content: center;
         align-items: center;
         height: 100%;
+    
     }
 
     img {
@@ -131,7 +137,7 @@ h1,h2,h3{
     }
     .heroto{
         background-image: url("../media/rd.nyttbilde.JPG");
-        margin-bottom: 20px;
+        margin: 20px 0 20px 0;
     }
 
     .hero, .heroto{
