@@ -59,6 +59,10 @@ h1,h2,h3{
     text-align: center;
 }
 
+#bestseller{
+    margin-top: 10px;
+}
+
 #herotitle{
     color: white;
     font-weight: 200;
