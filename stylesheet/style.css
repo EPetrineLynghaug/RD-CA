@@ -34,8 +34,6 @@ body {
 }
 
 header, main, footer {
-    /*padding: 20px;/**/
-    /*border: 1px solid #ccc;/**/
     font-family: "Helvetica", Arial, sans-serif;
 }
 
@@ -55,7 +53,7 @@ main {
 footer {
     grid-row: 3;
     background-color: rgb(37, 37, 37);
-    color: var(--secondary)
+    color: var(--primary)
 }
 h1,h2,h3{
     text-align: center;
@@ -301,17 +299,15 @@ h1,h2,h3{
         align-items: center;
         justify-content: space-between;
         padding: 12px 6px;
+        
     }
     
     .footer > * {
         width: 50%;
     }
     
-    .btn-link {
-        background: none;
-        font-size: 12px;
-        padding: 0;
-    }
+    
+  
    
 
 /* Stiler for større skjermer */
