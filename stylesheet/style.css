@@ -1,10 +1,27 @@
 :root{
-    --bacgroundcollor: #fafafa;
-    --color: rgb(5, 5, 5);
-    --headercollor: #bdedf8;
-    --buttoncolor:
+    --primary: #fafafa;
+    --secondery: rgb(5, 5, 5);
+    --header: #bdedf8;
+
+    --button: hsla(192, 73%, 15%, 0.85);
+
   
-}
+        
+    --white: #ffffff;
+    --black: #333333;
+        
+    --spacing-sm: 12px;
+    --spacing-md: 24px;
+    --spacing-lg: 48px;
+        
+    --font-small: 12px;
+    --font-medium: 16px;
+    --font-large: 24px;
+    --font-xlarge: 32px;
+    --font-xxlarge: 48px;
+      }
+      
+
 * {
     margin: 0;
     padding: 0;
@@ -24,21 +41,21 @@ header, main, footer {
 
 header {
     grid-row: 1;
-    background-color: var(--headercollor);
-    color: var(--color);
+    background-color: var(--header);
+    color: var(--secondary);
     border-bottom: solid 1px black;
 }
 
 main {
     grid-row: 2;
-    background-color: var(--bacgroundcollor);
-    color: var(--color);
+    background-color: var(--primary);
+    color: var(--secondary);
 }
 
 footer {
     grid-row: 3;
     background-color: rgb(37, 37, 37);
-    color: white;
+    color: var(--secondary)
 }
 h1,h2,h3{
     text-align: center;
@@ -123,7 +140,7 @@ h1,h2,h3{
 
     .menu-item a {
         text-decoration: none;
-        color: var(--color);
+        color: var(--secondary);
         padding: 5px 10px;
         display: block;
         text-align: center;
@@ -182,7 +199,7 @@ h1,h2,h3{
         background-color: hsla(192, 73%, 15%, 0.85);
         border: 0;
         border-radius: 4px;
-        color: var(--bacgroundcollor);
+        color: var(--primary);
         font-size: 16px;
         letter-spacing: 2px;
         box-shadow: 0 3px 6px rgba(0, 0, 0, .12)
@@ -194,12 +211,80 @@ h1,h2,h3{
     }
 
     /*Kundeklubben*/
-    .customerclub {
+    .newsletter-wrapper {
         display: flex;
         flex-direction: column;
-        text-align: center;
-        font-size: 14px;
-    }
+        align-items: flex-start;
+        justify-content: center;
+        width: 80%;
+        max-width: 500px;
+        padding: var(--spacing-lg) var(--spacing-md);
+        background-color: var(--header);
+        color: var(--black);
+        border-radius: 8px;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.12), 0 3px 6px rgba(0, 0, 0, 0.24);
+        margin: 15px;
+      }
+      .newsletter-title {
+        font-size: var(--font-xlarge);
+        text-transform: uppercase;
+      }
+      .newsletter-actions * {
+        font-size: var(--font-medium);
+      }
+      .newsletter-actions {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding-top: var(--spacing-md);
+      }
+      .email {
+        height: 50px;
+        padding: var(--spacing-sm) var(--spacing-md);
+        flex: 2;
+        border: none;
+        border-right: 2px solid var(--secondary);
+        border-radius: 4px 0 0 4px;
+        outline: none;
+      }
+      .submit {
+        position: relative;
+        flex: 1;
+        height: 50px;
+        padding: 0;
+        overflow: hidden;
+        border: none;
+        border-radius: 0 4px 4px 0;
+      }
+      .submit-box-1,
+      .submit-box-2 {
+        position: absolute;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        transition: all 0.3s;
+      }
+      .submit-box-1 {
+        top: 0;
+        left: 0;
+        background-color: var(--button);
+        color: var(--white);
+      }
+      .submit-box-2 {
+        top: 100%;
+        left: 0;
+        background-color: var(--black);
+        color: var(--primary);
+      }
+      .submit:active .submit-box-1 {
+        top: -100%;
+      }
+      .submit:active .submit-box-2 {
+        top: 0;
+      }
 
     input,textarea{
         font: 1em;
