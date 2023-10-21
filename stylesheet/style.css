@@ -296,7 +296,25 @@ h1,h2,h3{
         outline: none;
     
     }
+
+    /*Kontakt oss skjema*/
+
     
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        
+    }
+    
+    /* Tilpass stilene for inputfeltene og textarea */
+    input,textarea {
+        font: 15em;
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+        outline: none;
+    }
 
     /*Footer*/
     .footer {
