@@ -134,13 +134,12 @@ h1,h2,h3{
         min-height: 250px;
         max-height: 350px;
         overflow: hidden;
-        display: flex;
-        justify-content: center;
+       /* display: flex;
+        justify-content: center;*/
     }
     .card-image img{
         width: 100%;
-        display: flex;
-        justify-content: center;
+       
        
     }
     
