@@ -250,11 +250,14 @@ h1,h2,h3{
         flex: 4;
         min-height: 250px;
         max-height: 350px;
-        
-
+        width: 100%;
+        margin-top: 10px;
     }
     .product-image img{
         width: 80%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
     }
     
     .product-description{
@@ -588,5 +591,8 @@ h1,h2,h3{
     }
 
 }
+
+
+
 
 
