@@ -138,7 +138,7 @@ h1,h2,h3{
         justify-content: center;
     }
     .card-image img{
-        width: 60%;
+        width: 100%;
         display: flex;
         justify-content: center;
        
