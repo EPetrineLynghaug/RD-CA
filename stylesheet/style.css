@@ -109,7 +109,7 @@ h1,h2,h3{
     }
 
     .card-content > *{
-        margin: 18px 0;
+        margin: 10px 0;
         
     }
     .card-content{
@@ -117,8 +117,12 @@ h1,h2,h3{
         padding: 12px 24px;
     }
     .card-content h5{
-        font-size: 24px;
+        font-size: 20px;
         
+    }
+
+    .card-content p{
+        font-size: small;
     }
 
     .card-image{
@@ -130,9 +134,13 @@ h1,h2,h3{
         min-height: 250px;
         max-height: 350px;
         overflow: hidden;
+        display: flex;
+        justify-content: center;
     }
     .card-image img{
-        width: 100%;
+        width: 60%;
+        display: flex;
+        justify-content: center;
        
     }
     
