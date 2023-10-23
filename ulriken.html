@@ -33,25 +33,31 @@
     </header>
 
     <main>
-       <div class="hero">
-        <h1 id="herotitle">Klar for et nytt eventyr?</h1>
-        <div class="heroactions">
-        <button type="button" onclick="window.location.href = './jakker.html'">Herre</button>
-        <button type="button" onclick="window.location.href = './jakker.html'">Dame</button>
-            <!--<img src="./media/IMG_4837.JPG" alt="mann i gul jakke.">-->
-        </div>    
-        </div>
-
-        <h2 id="bestseller">Ulriken 100% ulljakke.</h2>
-        
-        <div class="product" id="alljackets">
-            <figure class="polaroid">
+        <section class="product">
+            <div class="product-image">
                 <img src="./media/RainyDays_Jacket7.jpg" alt="">
-                <figcaption>Ulriken 100% ull jakke</figcaption>
-                <p> NOK 1699.-</p>
-            </figure>
-        </div>
-
+       
+            </div>
+            <div class="product-content">
+               <h5>Ulriken 100% ulljakke <small>-kr 1699.-</small></h5>
+               <p class="product-description">Møt "Ulriken 100% ull" – vår lokale stolthet. Håndlaget i Bergen, denne jakken er både tradisjonell og førsteklasses. Laget av førsteklasses ull, gir den varme og stil til eventyrene dine.
+                   Med vår dedikasjon til lokal produksjon får du en jakke som beskytter mot elementene, uansett hvor du går i Bergen.
+                  Velg "Ulriken 100% ull" for varme, stil og tilknytning til vår kulturarv. En jakke som er like egnet for fjellturer som for bylivet</p>
+                  <div class="product-actions">
+                   <div class="product-color-picker">
+                     <button class="product-colorpicker-button black"></button>
+                     <button class="product-colorpicker-button red"></button>
+                     <button class="product-colorpicker-button green"></button>
+                   </div>  
+                   <div class="product-quantity">
+                     <label for="quantity">Antall</label>
+                     <input type="number" id="quantity" name="quantity" class="card-quantity-input" value="1" min="1" max="10">
+                   </div>
+                   <button class="product-button product-primary"><i class="fa-solid fa-cart-plus"></i> Legg i handlekurv</button>
+                   
+                  </div>
+            </div>   
+           </section>
        
 
 

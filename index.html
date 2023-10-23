@@ -10,9 +10,7 @@
 <body>
     <header>
         <div class="logo">
-            <a href="index.html">
             <img src="./media/RainyDays_Logo.png" alt="Rainydays logo">
-            </a>
         </div>
 
         <label for="hamburger-menu" class="menu-icon">
@@ -31,59 +29,66 @@
                 <li class="menu-item"><a href="./kontaktoss.html">Kontakt</a></li> 
             </ul>
         </nav>
+        
 
     </header>
 
-    <main>
-       <div class="hero">
-        <h1 id="herotitle">Klar for et nytt eventyr?</h1>
-        <div class="heroactions">
-        <button type="button" onclick="window.location.href = './jakker.html'">Herre</button>
-        <button type="button" onclick="window.location.href = './jakker.html'">Dame</button>
-        </div>    
+   
+
+    <main>    
+        <h2 id="bestseller">Alle jakker</h2>
+
+        <section class="card">
+         <div class="card-image">
+            <img src="./media/RainyDays_Jacket7.jpg" alt="">
+         </div>
+         <div class="card-content">
+            <h5>Ulriken 100% ulljakke <small>-kr 1699.-</small></h5>
+            <p class="card-description">Møt "Ulriken 100% ull" – vår lokale stolthet. Håndlaget i Bergen, denne jakken er både tradisjonell og førsteklasses. Laget av førsteklasses ull, gir den varme og stil til eventyrene dine.
+                Med vår dedikasjon til lokal produksjon får du en jakke som beskytter mot elementene, uansett hvor du går i Bergen.
+               Velg "Ulriken 100% ull" for varme, stil og tilknytning til vår kulturarv. En jakke som er like egnet for fjellturer som for bylivet</p>
+               <div class="card-actions">
+                <div class="card-color-picker">
+                  <button class="card-colorpicker-button black"></button>
+                  <button class="card-colorpicker-button red"></button>
+                  <button class="card-colorpicker-button green"></button>
+                </div>  
+                <div class="card-quantity">
+                  <label for="quantity">Antall</label>
+                  <input type="number" id="quantity" name="quantity" class="card-quantity-input" value="1" min="1" max="10">
+                </div>
+                <button class="card-button button-secondary">Vis produkt</button>
+                <button class="card-button button-primary">Legg i handlekurv</button>
+                
+               </div>
+         </div>   
+
+         <div class="card-image">
+            <img src="./media/RainyDays_Jacket2.jpg" alt="">
         </div>
-
-        <h2 id="bestseller">Bestselgere</h2>
-        
-        <div class="product" id="alljackets">
-            <figure class="polaroid" onclick="window.location.href = './ulriken.html';"`>
-                <img src="./media/RainyDays_Jacket7.jpg" alt="">
-                <figcaption>Ulriken 100% ull jakke</figcaption>
-                <span>NOK 1699.-</span>
-            </figure>
-    
-            <figure class="polaroid">
-                <img src="./media/RainyDays_Jacket2.jpg" alt="">
-                <figcaption>Scott løpejakke</figcaption>
-                <span>NOK 450.-</span>
-            </figure>
-    
-            <figure class="polaroid">
-                <img src="./media/RainyDays_Jacket3.jpg" alt="">
-                <figcaption>Fløyen sykkeljakke</figcaption>
-                <h3>NOK 1400.-</h3>
-            </figure>
-        </div>
-        
-        <div class="heroto">
-            <button type="button" id="jk" onclick="window.location.href = './jakker.html'">Se alle jakker</button>
-        </div>
-
-        <div class="newsletter-wrapper">
-            <span class="newsletter-title">Bli medlem</span>
-            <p>Hold deg oppdatert på utstyr, få 5års garanti og tjen cash points.</p>
-
-            <div class="newsletter-actions">
-            <input type="email" class="email" placeholder="Din e-mail" />
-
-            <button class="submit">
-              <div class="submit-box-1">Send inn</div>
-              <div class="submit-box-2">Suksess!</div>
-            </button>
-            </div>
-        </div>
-    </main>
-
+        <div class="card-content">
+           <h5>Ulriken 100% ulljakke <small>-kr 1699.-</small></h5>
+           <p class="card-description">Møt "Ulriken 100% ull" – vår lokale stolthet. Håndlaget i Bergen, denne jakken er både tradisjonell og førsteklasses. Laget av førsteklasses ull, gir den varme og stil til eventyrene dine.
+               Med vår dedikasjon til lokal produksjon får du en jakke som beskytter mot elementene, uansett hvor du går i Bergen.
+              Velg "Ulriken 100% ull" for varme, stil og tilknytning til vår kulturarv. En jakke som er like egnet for fjellturer som for bylivet</p>
+              <div class="card-actions">
+               <div class="card-color-picker">
+                 <button class="card-colorpicker-button black"></button>
+                 <button class="card-colorpicker-button red"></button>
+                 <button class="card-colorpicker-button green"></button>
+               </div>  
+               <div class="card-quantity">
+                 <label for="quantity">Antall</label>
+                 <input type="number" id="quantity" name="quantity" class="card-quantity-input" value="1" min="1" max="10">
+               </div>
+               <button class="card-button button-secondary">Vis produkt</button>
+               <button class="card-button button-primary">Legg i handlekurv</button>
+               
+              </div>
+        </div>  
+        </section>
+ 
+        </main>
 
     <footer class="footer">
       <!-- <h2 id="slogan">Pushing the comfort zone</h2>-->

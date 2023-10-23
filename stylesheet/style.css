@@ -75,38 +75,7 @@ h1,h2,h3{
 }
 
 
-    /*.product {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .polaroid {
-        width: 60%;
-        background-color: white;
-        box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2),
-        0 6px 20px 0 rgba(0, 0, 0, 0.15);
-        margin: 10px;
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-    
-    }
-    .product figure a {
-        text-decoration: none; 
-        color: inherit; 
-        cursor: pointer;
-    }
-    
-
-   
-    img {
-        max-width: 100%;
-        height: auto;
-    }*/
+/*Cards med produker i*/
 
     .card{
         width: 100%;
@@ -140,13 +109,17 @@ h1,h2,h3{
     }
 
     .card-image{
-        background-image: url(../media/RainyDays_Jacket7.jpg);
+        /*background-image: url(../media/RainyDays_Jacket7.jpg);*/
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center center;
         flex: 4;
         min-height: 250px;
-
+        max-height: 350px;
+        overflow: hidden;
+    }
+    .card-image img{
+        width: 100%;
     }
     
     .card-description{
@@ -220,6 +193,127 @@ h1,h2,h3{
 
 
     .button-secondary{
+        background-color: white;
+        color: var(--button);
+       
+    }
+
+
+    .card{
+        width: 100%;
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, .12);
+        border: 1px solid hsl( 0, 0%, 94%);
+        padding: 10px;
+    }
+   
+    
+    /*Produkt kjøp*/
+    .product-content *{
+        margin: 0;
+        padding: 0;
+        
+    }
+
+    .product-content > *{
+        margin: 18px 0;
+        
+    }
+    .product-content{
+        flex: 8;
+        padding: 12px 24px;
+    }
+    .product-content h5{
+        font-size: 24px;
+        
+    }
+
+    .product-image{
+       /* background-image: url(../media/RainyDays_Jacket7.jpg);*/
+        background-size: contain;
+        /*background-repeat: no-repeat;
+        background-position: center center;*/
+        flex: 4;
+        min-height: 250px;
+        max-height: 350px;
+        
+
+    }
+    .product-image img{
+        width: 80%;
+    }
+    
+    .product-description{
+   
+    
+    }
+
+    .product-actions{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: flex-end;
+
+        
+    }
+    .product-color-picker{
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 12px 0;
+       
+        
+    }
+    
+    .product-colorpicker-button{
+        width: 24px;
+        height: 24px;
+        border-radius: 100%;
+        margin-right: 6px;
+        padding: 12px 0;
+        
+    }
+    .red{
+        background-color: rgb(111, 21, 21);
+    }
+    .black{
+        background-color: black;
+    }
+
+    .green{
+        background-color: rgb(107, 92, 67);
+    }
+    .product-quantity{
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        
+        font-size: 20px;
+    }
+
+    .product-quantity-input{
+    width: 48px;
+    margin-left: 6px;
+    border: none;
+    border-bottom: 1px solid black;
+
+    }
+    .product-button{
+        width: auto;
+        font-size: 16px;
+        border: 2px solid var(--button);
+        padding: 6px;
+    }
+
+
+    .product-secondary{
         background-color: white;
         color: var(--button);
        
