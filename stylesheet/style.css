@@ -215,9 +215,6 @@ border-bottom: 1px solid black;
     background-color: var(--button);
 }
 a.card-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-decoration: none;
     color: #fff;
     text-align: center;
