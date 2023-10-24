@@ -77,184 +77,143 @@ h1,h2,h3{
 
 
 /*Cards med produker i*/
-    .cards {
-        width: 90%;
-        max-width: 500px;
-        display: flex;
-        flex-direction: column;
-        background-color: white;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, .12);
-        border: 1px solid hsl( 0, 0%, 94%);
-        padding: 10px;
-        margin: 20px auto;   
-    }
+.card {
+    width: 90%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .12);
+    border: 1px solid hsl( 0, 0%, 94%);
+    padding: 10px;
+    margin: 20px auto;   
+}
+
+.card-content *{
+    margin: 0;
+    padding: 0;
     
-    .cards-content *{
-        margin: 0;
-        padding: 0;
-        
-    }
+}
 
-    .cards-content > *{
-        margin: 10px 0;
-        
-    }
-    .cards-content{
-        flex: 8;
-        padding: 12px 24px;
-    }
-    .cards-content h5{
-        font-size: 20px;
-        
-    }
-
-    .cards-content p{
-        font-size: small;
-    }
-
-    .card-image{
-       background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center center;
-        flex: 4;
-        min-height: 250px;
-        max-height: 350px;
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-    }
-    .card-image img{
-        width: 100%;
-       
-       
-    }
+.card-content > *{
+    margin: 10px 0;
     
-    .cards-description{
-    display: -webkit-box; 
-    -webkit-box-orient: vertical; 
-    -webkit-line-clamp: 5; 
-    overflow: hidden; 
-    text-overflow: ellipsis;
-    }
-
+}
+.card-content{
+    flex: 8;
+    padding: 12px 24px;
+}
+.card-content h5{
+    font-size: 20px;
     
-    .cards-button{
-        width: 48%;
-        font-size: 16px;
-        border: 2px solid var(--button);
-        padding: 6px;
-        text-decoration: none;
-        background-color: var(--button);
-        color: var(--white);
-        
-    }
-    .link{
-        text-decoration: none;
-        color: var(--white);
-        background-color: var(--button);
-    }
+}
+
+.card-content p{
+    font-size: small;
+}
+
+.card-image{
+    /*background-image: url(../media/RainyDays_Jacket7.jpg);*/
+   background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    flex: 4;
+    min-height: 250px;
+    max-height: 350px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+.card-image img{
+    width: 100%;
+   
+   
+}
+
+.card-description{
+display: -webkit-box; 
+-webkit-box-orient: vertical; 
+-webkit-line-clamp: 5; 
+overflow: hidden; 
+text-overflow: ellipsis;
+}
+
+.card-actions{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;    
+}
+.card-color-picker{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 12px 0;
+   
     
-    /*Produkt kjøp*/
-    .product-content *{
-        margin: 0;
-        padding: 0;
-       
-    }
-    .product{
-        background-color: var(--white);
-    }
+}
 
-    .product-content > *{
-        margin: 18px 0;
-        background-color: var(--white);
-        
-    }
-    .product-content{
-        flex: 8;
-        padding: 12px 24px;
-      
-    }
-    .product-content h5{
-        font-size: 24px;
-        
-    }
-
-    .product-image{
-        background-size: contain;
-        flex: 4;
-        min-height: 250px;
-        max-height: 350px;
-        width: 100%;
-        margin-top: 10px;
-    }
-    .product-image img{
-        width: 70%;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-    }
+.card-colorpicker-button{
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    margin-right: 6px;
+    padding: 12px 0;
     
-    .product-actions{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: flex-end;  
-    }
-    .product-color-picker{
-        width: 50%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start;
-        padding: 12px 0;
-    }
+}
+.red{
+    background-color: rgb(111, 21, 21);
+}
+.black{
+    background-color: black;
+}
+
+.green{
+    background-color: rgb(107, 92, 67);
+}
+.card-quantity{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 20px;
+}
+
+.card-quantity-input{
+width: 48px;
+margin-left: 6px;
+border: none;
+border-bottom: 1px solid black;
+
+}
+.card-button{
+    width: 48%;
+    font-size: 16px;
+    border: 2px solid var(--button);
+    padding: 6px;
     
-    .product-colorpicker-button{
-        width: 24px;
-        height: 24px;
-        border-radius: 100%;
-        margin-right: 6px;
-        padding: 12px 0; 
-    }
-    .red{
-        background-color: rgb(111, 21, 21);
-    }
-    .black{
-        background-color: black;
-    }
+}
 
-    .green{
-        background-color: rgb(107, 92, 67);
-    }
-    .product-quantity{
-        width: 50%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-end;
-        font-size: 20px;
-    }
-
-    .product-quantity-input{
-    width: 48px;
-    margin-left: 6px;
-    border: none;
-    border-bottom: 1px solid black;
-
-    }
-    .product-button{
-        width: auto;
-        font-size: 16px;
-        border: 2px solid var(--button);
-        padding: 6px;            
-    }
-
-
-    .product-secondary{
-        background-color: white;
-        color: var(--button);
-    }
-
+.button-primary{
+    display: block;*/
+    text-decoration: none;
+    background-color: var(--button);
+}
+.button-secondary{
+    background-color: var(--button);
+    color: var(--button);
+    text-decoration: none;
+    display: block;
+   
+}
+.link a{
+    text-decoration: none;
+    color: var(--button);
+    background-color: var(--button);
+}
      /*Knapper*/
      .button{
         cursor: pointer;
