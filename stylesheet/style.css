@@ -77,7 +77,18 @@ h1,h2,h3{
 
 
 /*Cards med produker i*/
-   .card{
+   /*.card{
+        width: 90%;
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, .12);
+        border: 1px solid hsl( 0, 0%, 94%);
+        padding: 10px;
+        margin: 20px auto;   
+    }/**/
+    .card {
         width: 90%;
         max-width: 500px;
         display: flex;
@@ -206,6 +217,10 @@ h1,h2,h3{
         text-decoration: none;
         display: block;
        
+    }
+    .link{
+        text-decoration: none;
+        color: var(--button);
     }
     
     /*Produkt kjøp*/
