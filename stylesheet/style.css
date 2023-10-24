@@ -1,25 +1,25 @@
 :root{
-    --primary: #fafafa;
-    --secondery: rgb(5, 5, 5);
-    --header: #bdedf8;
+    /*--primary: #fafafa;*/
+    /*--secondery: rgb(5, 5, 5);*/
+   /* --header: #bdedf8;
 
-    --button: hsla(192, 73%, 15%, 0.85);
+    /*--button: hsla(192, 73%, 15%, 0.85);*/
 
   
         
-    --white: #ffffff;
-    --black: #333333;
+    /*--white: #ffffff;
+    --black: #333333;*/
         
-    --spacing-sm: 12px;
+    /*--spacing-sm: 12px;
     --spacing-md: 24px;
-    --spacing-lg: 48px;
+    --spacing-lg: 48px;*/
         
-    --font-small: 12px;
+    /*--font-small: 12px;
     --font-medium: 16px;
     --font-large: 24px;
     --font-xlarge: 32px;
     --font-xxlarge: 48px;
-      }
+      }*/
       
 
 * {
@@ -40,7 +40,7 @@ header, main, footer {
 
 header {
     grid-row: 1;
-    background-color: var(--header);
+    background-color: #bdedf8;
     color: var(--secondary);
     border-bottom: solid 1px black;
     max-height: 75px;
@@ -49,7 +49,7 @@ header {
 
 main {
     grid-row: 2;
-    background-color: var(--primary);
+    background-color: #fafafa;
     color: var(--secondary);
     /*padding: 12px;*/
 }
@@ -57,7 +57,7 @@ main {
 footer {
     grid-row: 3;
     background-color: rgb(37, 37, 37);
-    color: var(--primary)
+    color: #fafafa
 }
 h1,h2,h3{
     text-align: center;
@@ -192,7 +192,7 @@ border-bottom: 1px solid black;
 .card-button{
     width: 48%;
     font-size: 16px;
-    border: 2px solid var(--button);
+    border: 2px solid hsla(192, 73%, 15%, 0.85);;
     padding: 6px;
     
 }
@@ -200,19 +200,19 @@ border-bottom: 1px solid black;
 .button-primary{
     display: block;
     text-decoration: none;
-    background-color: var(--button);
+    background-color: hsla(192, 73%, 15%, 0.85);;
 }
 .button-secondary{
-    background-color: var(--button);
-    color: var(--button);
+    background-color: hsla(192, 73%, 15%, 0.85);;
+    color: hsla(192, 73%, 15%, 0.85);;
     text-decoration: none;
     display: block;
    
 }
 .link a{
     text-decoration: none;
-    color: var(--button);
-    background-color: var(--button);
+    color: hsla(192, 73%, 15%, 0.85);;
+    background-color: hsla(192, 73%, 15%, 0.85);;
 }
 a.card-button {
     text-decoration: none;
@@ -229,7 +229,7 @@ a.card-button {
         background-color: hsla(192, 73%, 15%, 0.85);
         border: 0;
         border-radius: 4px;
-        color: var(--primary);
+        color: #fafafa;
         font-size: 16px;
         letter-spacing: 2px;
         box-shadow: 0 3px 6px rgba(0, 0, 0, .12)
@@ -358,8 +358,8 @@ a.card-button {
         width: 93%;
         max-width: 500px;
         padding: var(--spacing-lg) var(--spacing-md);
-        background-color: var(--header);
-        color: var(--black);
+        background-color: #bdedf8;
+        color: #333333;;
         border-radius: 8px;
         box-shadow: 0 6px 10px rgba(0, 0, 0, 0.12), 0 3px 6px rgba(0, 0, 0, 0.24);
         margin: 13px;
@@ -411,14 +411,14 @@ a.card-button {
       .submit-box-1 {
         top: 0;
         left: 0;
-        background-color: var(--button);
-        color: var(--white);
+        background-color: hsla(192, 73%, 15%, 0.85);;
+        color: #ffffff;;
       }
       .submit-box-2 {
         top: 100%;
         left: 0;
-        background-color: var(--black);
-        color: var(--primary);
+        background-color: #333333;;
+        color: #fafafa;
       }
       .submit:active .submit-box-1 {
         top: -100%;
