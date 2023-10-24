@@ -226,16 +226,22 @@ h1,h2,h3{
     .product-content *{
         margin: 0;
         padding: 0;
+       
         
+    }
+    .product{
+        background-color: var(--white);
     }
 
     .product-content > *{
         margin: 18px 0;
+        background-color: var(--white);
         
     }
     .product-content{
         flex: 8;
         padding: 12px 24px;
+      
     }
     .product-content h5{
         font-size: 24px;
@@ -243,10 +249,7 @@ h1,h2,h3{
     }
 
     .product-image{
-       /* background-image: url(../media/RainyDays_Jacket7.jpg);*/
         background-size: contain;
-        /*background-repeat: no-repeat;
-        background-position: center center;*/
         flex: 4;
         min-height: 250px;
         max-height: 350px;
@@ -254,7 +257,7 @@ h1,h2,h3{
         margin-top: 10px;
     }
     .product-image img{
-        width: 80%;
+        width: 70%;
         position: relative;
         left: 50%;
         transform: translateX(-50%);
@@ -262,6 +265,8 @@ h1,h2,h3{
     
     .product-description{
    
+        
+
     
     }
 
@@ -308,7 +313,6 @@ h1,h2,h3{
         flex-direction: row;
         align-items: center;
         justify-content: flex-end;
-        
         font-size: 20px;
     }
 
@@ -399,6 +403,12 @@ h1,h2,h3{
         margin-top: 7px;
        
         }
+
+    #cart-icon{
+       margin:  auto 45px;
+      
+      
+    }
     .hero{
         min-height: 300px;
         background-image: url("../media/herobilde.JPG"); 
@@ -591,6 +601,7 @@ h1,h2,h3{
     }
 
 }
+
 
 
 
