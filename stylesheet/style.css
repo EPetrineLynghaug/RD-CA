@@ -198,7 +198,7 @@ border-bottom: 1px solid black;
 }
 
 .button-primary{
-    display: block;*/
+    display: block;
     text-decoration: none;
     background-color: var(--button);
 }
@@ -214,6 +214,15 @@ border-bottom: 1px solid black;
     color: var(--button);
     background-color: var(--button);
 }
+a.card-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    width: 49%;
+  }
      /*Knapper*/
      .button{
         cursor: pointer;
