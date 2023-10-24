@@ -33,9 +33,6 @@
             </ul>
         </nav>
         
-        <!--<HamburgerMeny :list="[
-            { href= " ./index.html", name="Hjem" }, { href="./index.html" , name="Hjem" }, { href="./index.html" ,
-            name="Hjem" }, ]" />-->
     </header>
 
     <main>
@@ -47,18 +44,19 @@
             </div>
         </div>
 
-        <h2 id="bestseller">Bestselgere</h2>
 
-         <a>
+            <h2 id="bestseller">Bestselgere</h2>
+
+            <section class="cards">
             <div class="card-image">
                                <a href="ulriken.html">
                                    <img src="./media/RainyDays_Jacket7.jpg" alt="">
                                </a>
                            </div>
                 
-                <div class="card-content">
+                <div class="cards-content">
                     <h5>Ulriken 100% ulljakke <small>-kr 1699.-</small></h5>
-                    <p class="card-description">Møt "Ulriken 100% ull" - vår lokale stolthet. Håndlaget i Bergen, denne
+                    <p class="cards-description">Møt "Ulriken 100% ull" - vår lokale stolthet. Håndlaget i Bergen, denne
                         jakken er både tradisjonell og førsteklasses. Laget av førsteklasses ull, gir den varme og stil
                         til
                         eventyrene dine.
@@ -69,26 +67,28 @@
                         egnet
                         for fjellturer som for bylivet.
                     </p>
-                    <div class="card-actions">
+                    <!--<div class="card-actions">
                         <div class="card-color-picker">
                             <button class="card-colorpicker-button black"></button>
                             <button class="card-colorpicker-button red"></button>
                             <button class="card-colorpicker-button green"></button>
                         </div>
-                        <div class="card-quantity">
+                    -->
+                        <div class="cards-quantity">
                             <label for="quantity1">Antall</label>
                             <input type="number" id="quantity1" name="quantity" class="card-quantity-input" value="1"
                                 min="1" max="10">
+                        </div>  
 
-                                <div class="card-button button-secondary">
+                                <div class="cards-button button-secondary">
                                     <a href="./ulriken.html">Vis produkt</a>
                                 </div>
-                                <div class="card-button button-primary">
+                                <div class="cards-button button-primary">
                                     <a href="./ulriken.html" >Legg i handlekurv</a>
                                 </div>
                 </div>
             </section>
-        </a>
+        
 
         <section class="card">
             <div class="card-image">
