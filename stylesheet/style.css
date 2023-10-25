@@ -298,15 +298,15 @@ border-bottom: 1px solid black;
 }*/
 a.product-button {
     text-decoration: none;
-    /*color: #fff;*/
     text-align: center;
-    width: 49%;
+    flex: content;
+    width: 40%;
     background-color: hsla(192, 73%, 15%, 0.85);
     color: white;
     font-size: 16px;
-    border: 2px solid hsla(192, 73%, 15%, 0.85);
+    border: 2px solid black;
     padding: 8px;
-    margin-right: 1%;
+    margin-right: 2%;
    
   }
 
