@@ -38,6 +38,9 @@ footer {
 h1,h2,h3{
     text-align: center;
 }
+h2{
+    margin-bottom: 10px;
+}
 
 #bestseller{
     margin-top: 10px;
@@ -79,7 +82,7 @@ h1,h2,h3{
     flex: 8;
     padding: 12px 24px;
 }
-.card-content h5, .product-content h5{
+.card-content h2, .product-content h2{
     font-size: 20px;
     
 }
@@ -377,9 +380,7 @@ a.product-button {
         }
 
     #cart-icon{
-       margin:  auto 45px;
-      
-      
+       margin:  0 45px;  
     }
     .hero{
         min-height: 300px;
