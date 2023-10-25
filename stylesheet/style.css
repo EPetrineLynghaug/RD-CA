@@ -1,4 +1,4 @@
-/*:root{
+:root{
     /*--primary: #fafafa;*/
     /*--secondery: rgb(5, 5, 5);*/
    /* --header: #bdedf8;
@@ -10,15 +10,15 @@
     /*--white: #ffffff;
     --black: #333333;*/
         
-    /*--spacing-sm: 12px;
-    --spacing-md: 24px;
-    --spacing-lg: 48px;*/
+    /*padding: 12px;: 12px;
+    padding: 24px;: 24px;
+    padding: 48px;: 48px;
         
-    /*--font-small: 12px;
-    --font-medium: 16px;
-    --font-large: 24px;
-    --font-xlarge: 32px;
-    --font-xxlarge: 48px;
+    -font-small: 12px;
+    font-size: 15px;: 16px;
+    font-size: 24px;: 24px;
+    font-size: 32px;: 32px;
+    font-size: 48px;: 48px;
       }*/
       
 
@@ -357,33 +357,33 @@ a.card-button {
         justify-content: center;
         width: 93%;
         max-width: 500px;
-        padding: var(--spacing-lg) var(--spacing-md);
+        padding: 24px; 
         background-color: #bdedf8;
-        color: #333333;;
+        color: #333333;
         border-radius: 8px;
         box-shadow: 0 6px 10px rgba(0, 0, 0, 0.12), 0 3px 6px rgba(0, 0, 0, 0.24);
         margin: 13px;
         
       }
       .newsletter-title {
-        font-size: var(--font-xlarge);
+        font-size: 32px;
         text-transform: uppercase;
       }
       .newsletter-actions * {
-        font-size: var(--font-medium);
+        font-size: 15px;
       }
       .newsletter-actions {
         width: 100%;
         display: flex;
         justify-content: space-between;
-        padding-top: var(--spacing-md);
+        padding-top: 24px;
       }
       .email {
         height: 50px;
-        padding: var(--spacing-sm) var(--spacing-md);
+        padding:24px;
         flex: 2;
         border: none;
-        border-right: 2px solid var(--secondary);
+        border-right: 2px solid rgb(5, 5, 5);
         border-radius: 4px 0 0 4px;
         outline: none;
       }
@@ -488,11 +488,4 @@ a.card-button {
     .card-image{
         min-height: 0;
     }
-
 }
-
-
-
-
-
-
