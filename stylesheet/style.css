@@ -1,14 +1,14 @@
 /*:root{
-    /*--primary: #fafafa;*/
-    /*--secondery: rgb(5, 5, 5);*/
-   /* --header: #bdedf8;
+    /*#fafafa;ry: #fafafa;*/
+    /*rgb(5, 5, 5);: rgb(5, 5, 5);*/
+   /* #bdedf8;: #bdedf8;
 
-    /*--button: hsla(192, 73%, 15%, 0.85);*/
+    /*hsla(192, 73%, 15%, 0.85);: hsla(192, 73%, 15%, 0.85);*/
 
   
         
-    /*--white: #ffffff;
-    --black: #333333;*/
+    /*#ffffff;: #ffffff;
+    #333333;: #333333;*/
         
     /*padding: 12px;: 12px;
     padding: 24px;: 24px;
@@ -77,7 +77,7 @@ h1,h2,h3{
 
 
 /*Cards med produker i*/
-.card {
+.card,.product {
     width: 90%;
     max-width: 500px;
     display: flex;
@@ -89,21 +89,21 @@ h1,h2,h3{
     margin: 20px auto;   
 }
 
-.card-content *{
+.card-content, .product-content *{
     margin: 0;
     padding: 0;
     
 }
 
-.card-content > *{
+.card-content, .product-content > *{
     margin: 10px 0;
     
 }
-.card-content{
+.card-content, .product-content{
     flex: 8;
     padding: 12px 24px;
 }
-.card-content h5{
+.card-content h5, .product-content h5{
     font-size: 20px;
     
 }
@@ -112,8 +112,7 @@ h1,h2,h3{
     font-size: small;
 }
 
-.card-image{
-    /*background-image: url(../media/RainyDays_Jacket7.jpg);*/
+.card-image, .product-image{
    background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
@@ -173,7 +172,7 @@ text-overflow: ellipsis;
 .green{
     background-color: rgb(107, 92, 67);
 }
-.card-quantity{
+.card-quantity, .product-quantity{
     width: 50%;
     display: flex;
     flex-direction: row;
@@ -182,7 +181,7 @@ text-overflow: ellipsis;
     font-size: 20px;
 }
 
-.card-quantity-input{
+.card-quantity-input, .product-quantity-input{
 width: 48px;
 margin-left: 6px;
 border: none;
@@ -219,7 +218,98 @@ a.card-button {
     color: #fff;
     text-align: center;
     width: 49%;
+    margin-right: 1%;
   }
+
+
+
+/*Produkt kjøp*/
+
+
+.product-image img{
+    width: 100%;
+    
+}
+
+
+.product-actions{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-end;
+    
+}
+.product-color-picker{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 12px 0;
+   
+    
+}
+
+.product-colorpicker-button{
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    margin-right: 6px;
+    padding: 12px 0;
+    
+}
+.product-quantity{
+    width: 50%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 20px;
+    display: block;
+    text-decoration: none;
+}
+.product-quantity-input{
+width: 48px;
+margin-left: 6px;
+border: none;
+border-bottom: 1px solid black;
+}
+
+
+.product-button{
+    width: auto;
+    font-size: 16px;
+    border: 2px solid hsla(192, 73%, 15%, 0.85);
+    padding: 6px;
+
+}
+
+
+.product-secondary{
+    background-color: hsla(192, 73%, 15%, 0.85);
+    color: white;
+    text-decoration: none;
+    display: block;
+   
+}
+/*.link a{
+    text-decoration: none;
+    color: white;
+    background-color: hsla(192, 73%, 15%, 0.85);;
+}*/
+a.product-button {
+    text-decoration: none;
+    /*color: #fff;*/
+    text-align: center;
+    width: 49%;
+    background-color: hsla(192, 73%, 15%, 0.85);
+    color: white;
+    font-size: 16px;
+    border: 2px solid hsla(192, 73%, 15%, 0.85);
+    padding: 8px;
+    margin-right: 1%;
+   
+  }
+
      /*Knapper*/
      .button{
         cursor: pointer;
