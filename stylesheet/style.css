@@ -526,7 +526,7 @@ a.product-button {
 
 
 
-/*Handlekurv*/
+/*Handlekurv skjema*/
 .cart form{
     margin: 30px auto;
     width: 400px;;
@@ -572,11 +572,6 @@ a.product-button {
     /*Matcher formen på borders*/
 
     outline: none;
-    /*Tar vekk den blå som vises når du trykker inni
-    ofte grei å fjerne og lage din egen.*/
-
-    /*transition: border 1s, background-color 1s;
-    /*Endrer fargen inni boksene. kan ofte være pent*/
 }
 
 
@@ -586,24 +581,28 @@ a.product-button {
     /*Tar skriften opp*/
     height: 5em;
     resize: vertical;
-    /*Kan gjør det større opp og ned men ikke lengre til venstre.Vertical er den du som oftes vil ha. */
 }
 
 
 /*Handlevogn kortet*/
+#handlevogn{
+    margin-top: 15px;
+}
 .cart-card {
-    /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    margin-bottom: 10%;
-    width: 400px;
     display: flex;
+    margin: 0;
+    min-height: 250px;
+    max-height: 350px;
+    margin-bottom: 50px;
+    margin-top: 15px;
 }
 
   .cart-card img{
     width: 100%;
     height: auto;
-    flex: 1;
+    flex: 2;
     padding: 10px;
   }
   
@@ -611,9 +610,18 @@ a.product-button {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   }
   
-  /* Add some padding inside the card container */
+  .cart-card-container h2{
+    margin-top: 10px;
+  }
+  
+  .cart-card-container h2, p{
+    margin-bottom: 20px;
+  }
+ 
   .cart-card-container {
     padding: 2px 16px;
+    margin-bottom: 20px;
+    flex: 2;
     
   }
 
