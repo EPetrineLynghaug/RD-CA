@@ -598,9 +598,8 @@ a.product-button {
   }
   
   
-    .cart-card img {
+    .cart-card-img {
         flex: 1;
-        padding: 10px;
       }
       
 
