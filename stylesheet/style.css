@@ -530,12 +530,10 @@ a.product-button {
 .cart form{
     margin: 30px auto;
     width: 400px;;
-    /*background-color: tomato;*/
-    
+    background-color: lightgrey;
     padding: 1em;
-    border: 1px solid #CCC;
+    border: 1px solid #bcbbbb;
     border-radius: 1em;
-    /*Ofte matcher denne paddingen or BR bra opp*/
 
 }
 .cart ul{
@@ -552,9 +550,9 @@ a.product-button {
 
 .cart label{
     display: inline-block;
-    width: 90px;
+    width: 99px;
     text-align: right;
-    /*uniform størrelse og alignment*/
+    
 }
 
 .cart label::after{
@@ -563,14 +561,12 @@ a.product-button {
 }
 
 .cart input,textarea{
-    font: 1em;
+    font: 4em;
     width: 300px;
-    /*Det er denne bredden som sier at tekstfeltene skal være like brede.*/
+    height: 25px;
     box-sizing: border-box;
-
+    background-color: lightgray;
     border: 1px solid black;
-    /*Matcher formen på borders*/
-
     outline: none;
 }
 
@@ -595,6 +591,8 @@ a.product-button {
     margin: 0;
     margin-bottom: 50px;
     margin-top: 15px;
+    background-color: white;
+    color: black;
   }
   
   
@@ -617,6 +615,15 @@ a.product-button {
   
   .cart-card-container h2, p {
     margin-bottom: 20px;
+  }
+
+  .payment{
+    margin-bottom: 20px;
+  }
+
+  .payment-button{
+    font-size: large;
+    margin: 0 auto;
   }
   
 
