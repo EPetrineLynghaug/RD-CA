@@ -597,11 +597,14 @@ a.product-button {
     transition: 0.3s;
     margin-bottom: 10%;
     width: 400px;
-    flex-direction: row;
+    display: flex;
 }
 
   .cart-card img{
-    width: 50%;
+    width: 100%;
+    height: auto;
+    flex: 1;
+    padding: 10px;
   }
   
   .cart-cardhover {
@@ -611,9 +614,7 @@ a.product-button {
   /* Add some padding inside the card container */
   .cart-card-container {
     padding: 2px 16px;
-    display: flex;
-    flex-direction: row;
-    flex: 1;
+    
   }
 
     /*Footer*/
