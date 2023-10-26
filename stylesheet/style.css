@@ -522,6 +522,77 @@ a.product-button {
         outline: none;
     }
 
+
+
+
+
+/*Handlekurv*/
+.cart form{
+    margin: 30px auto;
+    width: 400px;;
+    /*background-color: tomato;*/
+    
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+    /*Ofte matcher denne paddingen or BR bra opp*/
+
+}
+.cart ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+/*Tar vekk dottene*/
+}
+.cart form li + li{
+    margin-top: 1em;
+    /*et hack for å legge på noe på alle ele i en liste. ALLE etter det ele her form li. denne gjør 
+    noe med alle ele etter det. */
+}
+
+.cart label{
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+    /*uniform størrelse og alignment*/
+}
+
+.cart label::after{
+    content: ": ";
+    /*Legger kolon etter  lablene*/
+}
+
+.cart input,textarea{
+    font: 1em;
+    width: 300px;
+    /*Det er denne bredden som sier at tekstfeltene skal være like brede.*/
+    box-sizing: border-box;
+
+    border: 1px solid black;
+    /*Matcher formen på borders*/
+
+    outline: none;
+    /*Tar vekk den blå som vises når du trykker inni
+    ofte grei å fjerne og lage din egen.*/
+
+    /*transition: border 1s, background-color 1s;
+    /*Endrer fargen inni boksene. kan ofte være pent*/
+}
+
+
+
+.cart textarea{
+    vertical-align: top;
+    /*Tar skriften opp*/
+    height: 5em;
+    resize: vertical;
+    /*Kan gjør det større opp og ned men ikke lengre til venstre.Vertical er den du som oftes vil ha. */
+}
+
+
+
+
+
     /*Footer*/
     .footer {
         display: flex;
