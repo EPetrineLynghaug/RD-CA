@@ -617,9 +617,16 @@ a.product-button {
     margin-bottom: 20px;
   }
 
+
   .payment{
     margin-bottom: 20px;
   }
+
+  .payment li{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
   .payment-button{
     font-size: large;
