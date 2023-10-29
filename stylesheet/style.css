@@ -633,7 +633,34 @@ a.product-button {
     margin: 0 auto;
   }
   
+  .summary{
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  .summary th, .summary td {
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .summary th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+  }
+  
+  .summary tr:nth-child(odd) {
+    background-color: #e0e0e0;
+  }
 
+
+  .payment {
+    margin-left: 28%; 
+  }
+
+
+  
     /*Footer*/
     .footer {
         display: flex;
