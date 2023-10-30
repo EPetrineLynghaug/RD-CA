@@ -542,10 +542,19 @@ a.product-button {
     margin: 0;
 /*Tar vekk dottene*/
 }
+
+.cart li{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+
+}
 .cart form li + li{
     margin-top: 1em;
     /*et hack for å legge på noe på alle ele i en liste. ALLE etter det ele her form li. denne gjør 
     noe med alle ele etter det. */
+
 }
 
 .cart label{
@@ -557,7 +566,7 @@ a.product-button {
 
 .cart label::after{
     content: ": ";
-    /*Legger kolon etter  lablene*/
+    
 }
 
 .cart input,textarea{
@@ -568,13 +577,13 @@ a.product-button {
     background-color: lightgray;
     border: 1px solid black;
     outline: none;
+    margin-left: 5px;
 }
 
 
 
 .cart textarea{
     vertical-align: top;
-    /*Tar skriften opp*/
     height: 5em;
     resize: vertical;
 }
