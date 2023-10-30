@@ -5,8 +5,9 @@
 }
 
 body {
-    display: grid;
-    grid-template-rows: auto auto auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 100vh;
 }
 
@@ -15,7 +16,6 @@ header, main, footer {
 }
 
 header {
-    grid-row: 1;
     background-color: #bdedf8;
     color: var(--secondary);
     border-bottom: solid 1px black;
@@ -24,17 +24,19 @@ header {
 }
 
 main {
-    grid-row: 2;
+ 
     background-color: #fafafa;
     color: var(--secondary);
     /*padding: 12px;*/
 }
 
 footer {
-    grid-row: 3;
+  
     background-color: rgb(37, 37, 37);
-    color: #fafafa
+    color: #fafafa;
+    max-height: 100px;
 }
+
 h1,h2,h3{
     text-align: center;
 }
@@ -101,6 +103,9 @@ h2{
     overflow: hidden;
     display: flex;
     justify-content: center;
+}
+.product-image{
+text-align: center;
 }
 .card-image img{
     width: 100%;
@@ -206,7 +211,7 @@ a.card-button {
 
 
 .product-image img{
-    width: 100%;
+    width: 80%;
     
 }
 
@@ -270,11 +275,7 @@ border-bottom: 1px solid black;
     display: block;
    
 }
-/*.link a{
-    text-decoration: none;
-    color: white;
-    background-color: hsla(192, 73%, 15%, 0.85);;
-}*/
+
 a.product-button {
     text-decoration: none;
     text-align: center;
@@ -550,6 +551,7 @@ a.product-button {
     justify-content: center;
 
 }
+
 .cart form li + li{
     margin-top: 1em;
     /*et hack for å legge på noe på alle ele i en liste. ALLE etter det ele her form li. denne gjør 
@@ -608,6 +610,12 @@ a.product-button {
     .cart-card-img {
         flex: 1;
       }
+
+     .cart-card-img img{
+        min-width: 100px;
+        width: 50%;
+        max-width: 150px;
+     } 
       
 
   
@@ -629,6 +637,9 @@ a.product-button {
 
   .payment{
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .payment li{
@@ -669,12 +680,15 @@ a.product-button {
     background-color: #e0e0e0;
   }
 
-
-  .payment {
-    margin-left: 28%; 
-  }
-
-
+  .receit-card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: white;
+    color: black;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 10px;
+}
   
     /*Footer*/
     .footer {
@@ -691,18 +705,20 @@ a.product-button {
     }
     
     
-  
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
    
 
 /* Stiler for større skjermer */
 @media screen and (min-width: 481px) {
-    .menu-icon {
-        display: none;
-    }
 
-    .meny {
+   /* .meny {
         display: block;
-    }
+    }*/
+    
     .card{
         flex-direction: row;
     }
@@ -710,3 +726,116 @@ a.product-button {
         min-height: 0;
     }
 }
+
+@media screen and (min-width: 900px){
+    .menu-icon,
+    #cart-icon,
+    #hamburger-menu {
+        display: none;
+    }
+   
+    .meny-desktop{
+        padding: 0;
+        background-color: transparent;
+        border: 0;
+        padding-right: 20px;
+        position: initial;
+        display: block;
+
+    }
+    .meny-desktop ul{
+    display: flex;
+    list-style: none;
+    }
+    .meny-desktop li a{
+        padding: 10px;
+        text-decoration: none;
+        color: #000;
+        border-bottom: 2px solid transparent;
+        transition-duration: 0.2s;
+       
+    }
+    .meny-desktop li a:hover{
+        background-color: transparent;
+        color: black;
+        border-bottom:2px solid black;
+    }
+    .heroto{
+        background-position: center 100%;
+        height: 350px;
+        
+    }
+    .newsletter-wrapper{
+        margin: 0 auto 20px auto;
+    
+    }
+    .card-image a{
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .product{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        max-width: none;
+        background-color: white;
+        border: 0;
+        box-shadow: none;
+        padding: 15px;
+        margin: 0;
+        width: 100%;
+    }
+    .product-image{
+        text-align: center;
+         min-height: none;
+         max-height: none;
+         overflow: visible;
+         display: flex;
+         justify-content: center;
+         padding: 0 20px;
+     }
+
+     .product-content{
+        padding: 24px 48px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+     } 
+
+     .product-image a{
+        width: fit-content;
+        height: fit-content;
+     }
+     h1{
+        font-size: 36px;
+        text-align: left;
+        margin-bottom: 60px !important;
+     }
+     p{
+        max-width: 650px;
+     }
+
+/*.card-content, .product-content *{
+    margin: 0;
+    padding: 0;
+    
+}
+
+.card-content, .product-content > *{
+    margin: 10px 0;
+    
+}
+.card-content, .product-content{
+    flex: 8;
+    padding: 12px 24px;
+}
+.card-content h2, .product-content h2{
+    font-size: 20px;
+    
+}*/
+    
+    
+}/*media 900px*/
