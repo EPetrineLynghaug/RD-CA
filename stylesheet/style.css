@@ -529,7 +529,7 @@ a.product-button {
 /*Handlekurv skjema*/
 .cart form{
     margin: 30px auto;
-    width: 400px;;
+    width: 400px;
     background-color: lightgrey;
     padding: 1em;
     border: 1px solid #bcbbbb;
@@ -550,7 +550,7 @@ a.product-button {
 
 .cart label{
     display: inline-block;
-    width: 99px;
+    width: 75px;
     text-align: right;
     
 }
