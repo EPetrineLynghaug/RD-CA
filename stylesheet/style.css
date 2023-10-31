@@ -825,20 +825,14 @@ a.product-button {
         width: 100%;
     }
     .product-image{
-       /* text-align: center;
-        display: flex;
-        justify-content: center;
-        padding: 0 20px;
-        overflow: visible;
-        }*/
-        
-        text-align: center;
-         min-height: none;
-         max-height: none;
-         overflow: visible;
-         display: flex;
-         justify-content: center;
-         padding: 0 20px;*/
+    text-align: center;
+    min-height: none;
+    max-height: none;
+    overflow: visible;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+    box-sizing: border-box;
      }
 
      .product-content{
