@@ -209,10 +209,8 @@ a.card-button {
 
 /*Produkt kjøp*/
 
-
 .product-image img{
     width: 80%;
-    
 }
 
 
@@ -409,10 +407,6 @@ a.product-button {
 
     .heroactions{
         padding: 10px;
-        /*display: flex;
-        justify-content: space-evenly;
-        width: 50%;*/
-        
     }
 
    
@@ -505,7 +499,6 @@ a.product-button {
 
     /*Kontakt oss skjema*/
 
-    
     .contact-form {
         display: flex;
         flex-direction: column;
@@ -514,7 +507,6 @@ a.product-button {
         
     }
     
-    /* Tilpass stilene for inputfeltene og textarea */
     input,textarea {
         font: 15em;
         width: 100%;
@@ -541,7 +533,7 @@ a.product-button {
     list-style: none;
     padding: 0;
     margin: 0;
-/*Tar vekk dottene*/
+
 }
 
 .cart li{
@@ -554,9 +546,6 @@ a.product-button {
 
 .cart form li + li{
     margin-top: 1em;
-    /*et hack for å legge på noe på alle ele i en liste. ALLE etter det ele her form li. denne gjør 
-    noe med alle ele etter det. */
-
 }
 
 .cart label{
