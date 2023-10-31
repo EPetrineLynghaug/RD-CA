@@ -824,17 +824,17 @@ a.product-button {
         margin: 0;
         width: 100%;
     }
-    .product-image{
-    text-align: center;
-    min-height: none;
-    max-height: none;
-    overflow: visible;
-    display: flex;
-    justify-content: center;
-    padding: 0 20px;
-    box-sizing: border-box;
-     }
 
+    .product-image {
+        text-align: center;
+        min-height: auto;
+        max-height: none;
+        overflow: visible;
+        display: flex;
+        justify-content: center;
+        padding: 0 20px;
+    }
+    
      .product-content{
         padding: 24px 48px;
         display: flex;
@@ -873,6 +873,3 @@ a.product-button {
     font-size: 20px;
     
 }*/
-    
-    
-/*media 900px*/
