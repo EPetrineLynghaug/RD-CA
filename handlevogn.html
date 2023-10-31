@@ -34,9 +34,9 @@
         </nav>
         
     </header>
-    <main>
+    <main class="cart-page">
 
-        <h1 id="handlevogn">Din handlevogn (1)</h1>
+        <h1 id="handlevogn">Din handlevogn <sup>(1)</sup></h1>
         <div class="cart-card">
             <div class="cart-card-img">
             <img src="./media/RainyDays_Jacket7.jpg" alt="Avatar">
@@ -67,30 +67,28 @@
 
         <h2> Fullfør kjøp</h2>
         <form action="./formhandler.html" div class="cart">
-            <ul>
-                <li>
+            <ul class="cart-form-list">
+                <li class="cart-form-list-item">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="user_name">
                 </li>
-                <li>
+                <li class="cart-form-list-item">
                     <label for="mail">E-mail</label>
                     <input type="email" id="mail" name="user_email">
                 </li>
-                <li>
+                <li class="cart-form-list-item">
                     <label for="adress">Adresse</label>
                     <input type="adress" id="adress" name="user_adress"></textarea>
                 </li>
-
-                <li>
+                <li class="cart-form-list-item">
                     <label for="postcode">Postkode</label>
                     <input type="postcode" id="pc" name="user_postcode"></textarea>
                 </li>
-                <li>
+                <li class="cart-form-list-item">
                     <label for="city">By</label>
                     <input type="city" id="city" name="user_city"></textarea>
                 </li>
-
-                <li>
+                <li class="cart-form-list-item">
                     <label for="phone">Mobil</label>
                     <input type="phone" id="phone" name="user_phone"></textarea>
                 </li>
@@ -100,13 +98,22 @@
       
        
             <div class="payment">
-            <h2>Velg betalingsmåte</h2>
-            <ul class="payment-alternatives">
-            <li> <i class="fa-regular fa-circle-check"></i> Vipps</li>
-             <li><i class="fa-regular fa-circle"></i> Visa/Mastercard</li>
-             <li><i class="fa-regular fa-circle"></i> Klarna</li>
-            </ul>
-            <a href="./kvittering.html" class="product-button product-primary cart-button"><i class="fa-solid fa-cart-plus"></i> Kjøp</a>
+                <h2>Velg betalingsmåte</h2>
+                <ul class="payment-alternatives">
+                    <li class="payment-alt-item">
+                        <!-- <i class="fa-regular fa-circle-check"></i> -->
+                        <input type="checkbox" checked> Vipps
+                    </li>
+                    <li class="payment-alt-item">
+                        <!-- <i class="fa-regular fa-circle"></i> -->
+                        <input type="checkbox"> Visa/Mastercard
+                    </li>
+                    <li class="payment-alt-item">
+                        <!-- <i class="fa-regular fa-circle"></i> -->
+                        <input type="checkbox"> Klarna
+                    </li>
+                </ul>
+                <a href="./kvittering.html" class="product-button product-primary cart-button"><i class="fa-solid fa-cart-plus"></i> Kjøp</a>
             </div>
     </main>
 

@@ -562,6 +562,7 @@ a.product-button {
 .cart label{
     display: inline-block;
     width: 70px;
+    height: fit-content;
     text-align: right;
     
 }
@@ -592,23 +593,35 @@ a.product-button {
 
 
 /*Handlevogn kortet*/
+.cart-page {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 12px;
+}
 #handlevogn{
     margin-top: 15px;
+    text-align: left;
 }
 .cart-card {
     display: flex;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
     transition: 0.3s;
     margin: 0;
     margin-bottom: 50px;
     margin-top: 15px;
-    background-color: white;
+    /* background-color: white; */
     color: black;
+    text-align: left;
+    /* border-bottom: 1px solid hsl(0, 0%, 92%); */
   }
   
   
     .cart-card-img {
-        flex: 1;
+        /* flex: 1; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
      .cart-card-img img{
@@ -622,7 +635,7 @@ a.product-button {
   .cart-card-container {
     padding: 2px 16px;
     margin-bottom: 20px;
-    flex: 1;
+    /* flex: 1; */
   }
   
   .cart-card-container h2 {
@@ -631,25 +644,48 @@ a.product-button {
   }
   
   .cart-card-container h2, p {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
 
   .payment{
+    margin-top: 20px;
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .payment li{
+  .payment .cart-form-list-item {
+    display: flex;
+    align-items: center;
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
+.cart-form-list-item label {
+    /* background: red; */
+    margin-top: 4px;
+}
+.cart-form-list-item input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
 .payment-alternatives{
     padding-bottom: 20px;
+    list-style: none;
+}
+.payment-alt-item {
+    display: flex;
+    justify-content: flex-start;
+}
+.payment-alt-item input {
+    width: fit-content;
+    margin-right: 6px;
+    margin-top: 2px;
 }
 
   .cart-button{
