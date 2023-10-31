@@ -12,7 +12,7 @@
 <body>
     <header>
         <div class="logo">
-            <img src="./media/RainyDays_Logo.png" alt="Rainydays logo" width="450px" height="450px">
+            <img src="./media/RainyDays_Logo.png" alt="Rainydays logo" width="450" height="450">
         </div>
 
         <label for="hamburger-menu" class="menu-icon">
@@ -32,7 +32,32 @@
             </ul>
         </nav>
     </header>
+
     <main>
+        <div class="newsletter-wrapper">
+            <span class="newsletter-title">Kontakt oss</span>
+    
+            <form class="contact-form">
+                <label for="name">Ditt navn:</label>
+                <input type="text" id="name" class="name" placeholder="Ditt navn" required />
+    
+                <label for="email">Din e-post:</label>
+                <input type="email" id="email" class="email" placeholder="Din e-post" required />
+    
+                <label for="message">Din melding:</label>
+                <textarea id="message" class="message" placeholder="Din melding" required></textarea>
+    
+                <div style="margin-top: 10px;"></div>
+    
+                <button class="submit" style="flex: none;">
+                    <div class="submit-box-1">Send inn</div>
+                    <div class="submit-box-2">Suksess!</div>
+                </button>
+            </form>
+        </div>
+    </main>
+    
+   <!-- <main>
         <div class="newsletter-wrapper">
             <span class="newsletter-title">Kontakt oss</span>
 
@@ -48,7 +73,7 @@
             </form>
         </div>
 
-    </main>
+    </main>-->
 
 
     <footer class="footer">
