@@ -17,7 +17,7 @@ header, main, footer {
 
 header {
     background-color: #bdedf8;
-    color: var(--secondary);
+    color: black;
     border-bottom: solid 1px black;
     max-height: 75px;
     padding: 0;
@@ -26,7 +26,7 @@ header {
 main {
  
     background-color: #fafafa;
-    color: var(--secondary);
+    color: black;
     /*padding: 12px;*/
 }
 
@@ -359,7 +359,7 @@ a.product-button {
 
     .menu-item a {
         text-decoration: none;
-        color: var(--secondary);
+        color: black;
         padding: 5px 10px;
         display: block;
         text-align: center;
