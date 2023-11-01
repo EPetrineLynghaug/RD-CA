@@ -320,9 +320,9 @@ a.product-button {
     .menu-icon {
         display: block;
         cursor: pointer;
-        font-size: 2em;
+        font-size: 20px;
         z-index: 1;
-        margin: auto 0px;
+        margin: auto 5px;
         
     }
 
@@ -380,7 +380,7 @@ a.product-button {
  
 
     #cart-icon{
-       margin:  0 45px;  
+       margin:  0 18px;  
     }
     .hero{
         min-height: 300px;
