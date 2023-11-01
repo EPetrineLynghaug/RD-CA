@@ -47,10 +47,10 @@ h2{
 }
 
 #herotitle{
-    color: white;
+    color: black;
     font-weight: 200;
     letter-spacing: 5px;
-    text-shadow: 0 0 50px  black;
+    /* text-shadow: 0 0 50px  black; */
 }
 
 /* Kort og produktkomponenter */
@@ -444,10 +444,6 @@ a.product-button {
         justify-content: space-between;
         flex-wrap: wrap;
         padding-top: 24px;
-      }
-      .newsletter-actions label{
-        width: 100%;
-        margin-bottom: 4px;
       }
       .email {
         height: 50px;
