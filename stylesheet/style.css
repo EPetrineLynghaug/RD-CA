@@ -48,9 +48,9 @@ h2{
 
 #herotitle{
     color: white;
-    font-weight: 700;
+    font-weight: 200;
     letter-spacing: 5px;
-    text-shadow: 0 0 10px  black;
+    text-shadow: 0 0 50px  black;
 }
 
 /* Kort og produktkomponenter */
@@ -387,8 +387,6 @@ a.product-button {
     .hero{
         min-height: 300px;
         background-image: url("../media/herobilde.JPG"); 
-        background-color: #494949;
-        background-blend-mode: hard-light;
         background-position: 0% 80%;
         background-size: cover;
         display: flex;
@@ -444,7 +442,12 @@ a.product-button {
         width: 100%;
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         padding-top: 24px;
+      }
+      .newsletter-actions label{
+        width: 100%;
+        margin-bottom: 4px;
       }
       .email {
         height: 50px;
