@@ -56,7 +56,11 @@ h2{
 
 
 /*Cards med produker i*/
-.card,.product {
+
+/* Kort og produktkomponenter */
+
+.card,
+.product {
     width: 90%;
     max-width: 500px;
     display: flex;
@@ -70,21 +74,25 @@ h2{
 
 
 /*styling som er likt mellom cardsene*/
-.card-content, .product-content *{
+.card-content, 
+.product-content *{
     margin: 0;
     padding: 0;
     
 }
 
-.card-content, .product-content > *{
+.card-content, 
+.product-content > *{
     margin: 10px 0;
     
 }
-.card-content, .product-content{
+.card-content,
+ .product-content{
     flex: 8;
     padding: 12px 24px;
 }
-.card-content h2, .product-content h2{
+.card-content h2, 
+.product-content h2{
     font-size: 20px;
     
 }
@@ -109,8 +117,6 @@ text-align: center;
 }
 .card-image img{
     width: 100%;
-   
-   
 }
 
 .card-description{
