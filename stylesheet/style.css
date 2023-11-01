@@ -389,11 +389,15 @@ a.product-button {
         background-image: url("../media/herobilde.JPG"); 
         background-position: 0% 80%;
         background-size: cover;
+    }
+    .hero-overlay {
+        width: 100%;
+        height: 100%;
+        background-color: hsla(0, 0%, 100%, 0.18);
         display: flex;
         align-items: center;
         justify-content: center;  
         flex-direction: column; 
-
     }
     .heroto{
         background-image: url("../media/rd.nyttbilde.JPG");
