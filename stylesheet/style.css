@@ -48,9 +48,9 @@ h2{
 
 #herotitle{
     color: white;
-    font-weight: 200;
+    font-weight: 700;
     letter-spacing: 5px;
-    text-shadow: 0 0 50px  black;
+    text-shadow: 0 0 10px  black;
 }
 
 /* Kort og produktkomponenter */
@@ -387,7 +387,7 @@ a.product-button {
     .hero{
         min-height: 300px;
         background-image: url("../media/herobilde.JPG"); 
-        background-color: #333;
+        background-color: #494949;
         background-blend-mode: hard-light;
         background-position: 0% 80%;
         background-size: cover;
