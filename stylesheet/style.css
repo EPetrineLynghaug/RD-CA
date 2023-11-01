@@ -316,6 +316,7 @@ a.product-button {
         flex-direction: row;
         align-items: center;
         justify-content: flex-end;
+        padding: 0 12px;
     }
     .menu-icon {
         display: block;
@@ -380,7 +381,7 @@ a.product-button {
  
 
     #cart-icon{
-       margin:  0 18px;  
+       margin:  -4px 18px 0 18px;
        font-size: 24px;
     }
     .hero{
