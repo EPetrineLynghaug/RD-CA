@@ -24,10 +24,8 @@ header {
 }
 
 main {
- 
     background-color: #fafafa;
     color: black;
-    /*padding: 12px;*/
 }
 
 footer {
@@ -70,6 +68,8 @@ h2{
     margin: 20px auto;   
 }
 
+
+/*styling som er likt mellom cardsene*/
 .card-content, .product-content *{
     margin: 0;
     padding: 0;
@@ -134,7 +134,6 @@ text-overflow: ellipsis;
     align-items: center;
     justify-content: flex-start;
     padding: 12px 0;
-   
     
 }
 
@@ -146,16 +145,10 @@ text-overflow: ellipsis;
     padding: 12px 0;
     
 }
-.red{
-    background-color: rgb(111, 21, 21);
-}
-.black{
-    background-color: black;
+.red, .green, .black{
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
-.green{
-    background-color: rgb(107, 92, 67);
-}
 .card-quantity, .product-quantity{
     width: 50%;
     display: flex;
@@ -594,20 +587,16 @@ a.product-button {
 }
 .cart-card {
     display: flex;
-    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
     transition: 0.3s;
     margin: 0;
     margin-bottom: 50px;
     margin-top: 15px;
-    /* background-color: white; */
     color: black;
     text-align: left;
-    /* border-bottom: 1px solid hsl(0, 0%, 92%); */
   }
   
   
     .cart-card-img {
-        /* flex: 1; */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -624,7 +613,6 @@ a.product-button {
   .cart-card-container {
     padding: 2px 16px;
     margin-bottom: 20px;
-    /* flex: 1; */
   }
   
   .cart-card-container h2 {
@@ -654,7 +642,6 @@ a.product-button {
 }
 
 .cart-form-list-item label {
-    /* background: red; */
     margin-top: 4px;
 }
 .cart-form-list-item input {
@@ -739,12 +726,7 @@ a.product-button {
 
 /* Stiler for større skjermer */
 @media screen and (min-width: 481px) {
-
-   /* .meny {
-        display: block;
-    }*/
-    
-    .card{
+   .card{
         flex-direction: row;
     }
     .card-image{
