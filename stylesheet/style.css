@@ -148,20 +148,19 @@ text-overflow: ellipsis;
     
 }
 
-.red, 
-.green, 
-.black{
-    background-color: rgba(0, 0, 0, 0.1);
-}
 
 .card-quantity,
  .product-quantity{
-    width: 50%;
+    width: 100%; /*Gir knappen 100% når vi lengre ikke har diven*/
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
     font-size: 20px;
+}
+
+.card-quantity lable{
+    margin-right: 5px;
 }
 
 .card-quantity-input,
@@ -370,13 +369,13 @@ a.product-button {
 
     /*Bilder*/
     .logo img{
-        max-width: 20%;
         height: auto;
+        width: 92px;
         margin: auto 5px;
         padding: 10px;
         margin-top: 7px;
-       
         }
+ 
 
     #cart-icon{
        margin:  0 45px;  
