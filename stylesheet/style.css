@@ -741,6 +741,16 @@ textarea{
         align-items: center;
         justify-content: space-between;
     }
+
+    /*Om oss tekst*/
+    .rainydays-text {
+        font-size: 16px;
+        color: #333;
+        line-height: 1.5;
+        padding: 20px;
+    }
+    
+
    
 
 /* Stiler for større skjermer */
