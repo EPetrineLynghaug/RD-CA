@@ -58,7 +58,6 @@ h2{
     color: black;
     font-weight: 700;
     letter-spacing: 5px;
-    /* text-shadow: 0 0 50px  black; */
 }
 
 /* Kort og produktkomponenter */
@@ -163,7 +162,7 @@ text-overflow: ellipsis;
 
 .card-quantity,
  .product-quantity{
-    width: 100%; /*Gir knappen 100% når vi lengre ikke har diven*/
+    width: 100%; 
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -768,9 +767,6 @@ textarea{
     /*Kontakt oss skjema og side*/
     .contact-form-wrapper{
         border: 3px solid red;
-        /*display: flex;
-        flex-direction: column;
-        align-items: flex-start;*/
         max-width: 650px;
         margin: 20px auto;
         padding: 20px;
@@ -903,7 +899,6 @@ textarea{
      h1{
         font-size: 36px;
         text-align: left;
-       /* margin-bottom: 30px /*!important*/;
      }
 
 
