@@ -120,10 +120,7 @@ h2{
     display: flex;
     justify-content: center;
 }
-.all-bestseller-cards{
-display: flex;
-flex-wrap: wrap;
-}
+
 .product-image{
 text-align: center;
 }
@@ -904,5 +901,9 @@ textarea{
      p {
         max-width: 650px;
     }
+    .all-bestseller-cards{
+        display: flex;
+        flex-wrap: wrap;
+        }
 }
 
