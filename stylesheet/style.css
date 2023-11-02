@@ -49,15 +49,20 @@ h2{
     margin-bottom: 10px;
 }
 
-#bestseller{
+
+
+.italic{
     font-style: italic;
     margin-top: 10px;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 #herotitle{
     color: black;
     font-weight: 700;
     letter-spacing: 5px;
+    /* text-shadow: 0 0 50px  black; */
 }
 
 /* Kort og produktkomponenter */
@@ -162,13 +167,13 @@ text-overflow: ellipsis;
 
 .card-quantity,
  .product-quantity{
-    width: 100%; 
+    width: 100%; /*Gir knappen 100% når vi lengre ikke har diven*/
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
     font-size: 20px;
-    margin-right: 10px;
+    /*margin-right: 10px;*/
 }
 
 .card-quantity lable{
@@ -224,11 +229,10 @@ a.card-button {
 }
 
 .product-actions{
-    display: flex;
+   display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: flex-end;
-    
 }
 .product-color-picker{
     width: 50%;
@@ -766,7 +770,10 @@ textarea{
 
     /*Kontakt oss skjema og side*/
     .contact-form-wrapper{
-        border: 3px solid red;
+        /*border: 1px solid black;
+        /*display: flex;
+        flex-direction: column;
+        align-items: flex-start;*/
         max-width: 650px;
         margin: 20px auto;
         padding: 20px;
@@ -899,6 +906,7 @@ textarea{
      h1{
         font-size: 36px;
         text-align: left;
+       /* margin-bottom: 30px /*!important*/;
      }
 
 
