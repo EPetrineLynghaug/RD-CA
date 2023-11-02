@@ -778,13 +778,17 @@ textarea{
     
     }
     .contact-form .contact-form-message{
-       margin: 0;
        width: 100%;
        background-color: white;
        min-height: 150px;
        resize: vertical;
        max-height: 400px;
     
+    }
+    .contact-form-name,
+    .contact-form-email,
+    .contact-form-message {
+        margin: 3px 0 0 0; 
     }
 
    
