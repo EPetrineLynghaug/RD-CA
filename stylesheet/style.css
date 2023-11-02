@@ -518,22 +518,6 @@ a.product-button {
     
     }
 
-    /*Kontakt oss skjema*/
-
-    .contact-form {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-    }
-    
-    input,
-    textarea {
-        font: 15em;
-        width: 100%;
-        box-sizing: border-box;
-        margin-bottom: 10px;
-        outline: none;
-    }
 
 /*Handlekurv skjema*/
 .cart form{
@@ -772,7 +756,36 @@ textarea{
         max-width: 400px;
         mix-blend-mode: hard-light;
     }
+
+    /*Kontakt oss skjema og side*/
+    .contact-form-wrapper{
+        border: 3px solid red;
+        /*display: flex;
+        flex-direction: column;
+        align-items: flex-start;*/
+        max-width: 650px;
+        margin: 20px auto;
+        padding: 20px;
+    }
+    .contact-form ul{
+        list-style: none;
+        padding: 20px 0;
+    }
+    .contact-form ul li{
+        padding: 6px 0;
+        display: flex;
+        flex-direction: column;
     
+    }
+    .contact-form .contact-form-message{
+       margin: 0;
+       width: 100%;
+       background-color: white;
+       min-height: 150px;
+       resize: vertical;
+       max-height: 400px;
+    
+    }
 
    
 
