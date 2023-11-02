@@ -31,6 +31,7 @@ header {
 main {
     background-color: #fafafa;
     color: black;
+    flex: 1;
 }
 
 footer {
@@ -847,7 +848,7 @@ textarea{
      h1{
         font-size: 36px;
         text-align: left;
-        margin-bottom: 60px !important;
+       /* margin-bottom: 30px /*!important*/;
      }
 
 
@@ -855,23 +856,11 @@ textarea{
         max-width: 650px;
     }
     
-}
-
-/*.card-content, .product-content *{
-    margin: 0;
-    padding: 0;
+    .rainydays-text{
+        width: 100%;
+        max-width: 700px;
+        margin: 0 auto;
+    }
     
 }
 
-.card-content, .product-content > *{
-    margin: 10px 0;
-    
-}
-.card-content, .product-content{
-    flex: 8;
-    padding: 12px 24px;
-}
-.card-content h2, .product-content h2{
-    font-size: 20px;
-    
-}/**/
