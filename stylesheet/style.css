@@ -406,8 +406,7 @@ a.product-button {
     }
     .heroto-overlay{
         display: flex;
-        align-items: start;
-        flex-direction: column;
+        align-items: flex-start;
     }
     .heroto{
         background-image: url("../media/rd.nyttbilde_3_11zon.jpg");
