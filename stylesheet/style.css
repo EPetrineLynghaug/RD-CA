@@ -462,7 +462,7 @@ a.product-button {
       }
       .email {
         height: 50px;
-        padding:24px;
+        padding:20px;/*du er her nå*/
         flex: 2;
         border: none;
         border-right: 2px solid rgb(5, 5, 5);
