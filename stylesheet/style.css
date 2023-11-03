@@ -62,7 +62,6 @@ h2{
     color: black;
     font-weight: 700;
     letter-spacing: 5px;
-    /* text-shadow: 0 0 50px  black; */
 }
 
 /* Kort og produktkomponenter */
@@ -429,7 +428,6 @@ a.product-button {
         padding: 10px;
     }
 
-   
 
     /*Kundeklubben*/
     .newsletter-wrapper {
@@ -527,196 +525,186 @@ a.product-button {
 
 
 /*Handlekurv skjema*/
-.cart form{
-    margin: 30px auto;
-    width: 400px;
-    background-color: lightgrey;
-    padding: 1em;
-    border: 1px solid #bcbbbb;
-    border-radius: 1em;
+    .cart form{
+        margin: 30px auto;
+        width: 400px;
+        background-color: lightgrey;
+        padding: 1em;
+        border: 1px solid #bcbbbb;
+        border-radius: 1em;
+    }
 
-}
-.cart ul{
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    .cart ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
 
-}
+    .cart li{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+    }
 
-.cart li{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
+    .cart form li + li{
+        margin-top: 1em;
+    }
 
-}
+    .cart label{
+        display: inline-block;
+        width: 70px;
+        height: fit-content;
+        text-align: right;
+    }
 
-.cart form li + li{
-    margin-top: 1em;
-}
+    .cart label::after{
+        content: ": ";
+    }
 
-.cart label{
-    display: inline-block;
-    width: 70px;
-    height: fit-content;
-    text-align: right;
-    
-}
-
-.cart label::after{
-    content: ": ";
-    
-}
-
-.cart input,
-textarea{
-    font: 4em;
-    width: 200px;
-    height: 25px;
-    box-sizing: border-box;
-    background-color: lightgray;
-    border: 1px solid black;
-    outline: none;
-    margin-left: 5px;
-}
+    .cart input,
+    textarea{
+        font: 4em;
+        width: 200px;
+        height: 25px;
+        box-sizing: border-box;
+        background-color: lightgray;
+        border: 1px solid black;
+        outline: none;
+        margin-left: 5px;
+    }
 
 
 
-.cart textarea{
-    vertical-align: top;
-    height: 5em;
-    resize: vertical;
-}
+    .cart textarea{
+        vertical-align: top;
+        height: 5em;
+        resize: vertical;
+    }
 
 
-/*Handlevogn kortet*/
-.cart-page {
-    width: 100%;
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 12px;
-}
-#handlevogn{
-    margin-top: 15px;
-    text-align: left;
-}
-.cart-card {
-    display: flex;
-    transition: 0.3s;
-    margin: 0;
-    margin-bottom: 50px;
-    margin-top: 15px;
-    color: black;
-    text-align: left;
-  }
+    /*Handlevogn kortet*/
+    .cart-page {
+        width: 100%;
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 12px;
+    }
+    #handlevogn{
+        margin-top: 15px;
+        text-align: left;
+    }
+    .cart-card {
+        display: flex;
+        transition: 0.3s;
+        margin: 0;
+        margin-bottom: 50px;
+        margin-top: 15px;
+        color: black;
+        text-align: left;
+    }
   
   
     .cart-card-img {
         display: flex;
         align-items: center;
         justify-content: center;
-      }
+    }
 
-     .cart-card-img img{
+    .cart-card-img img{
         min-width: 100px;
         width: 50%;
         max-width: 150px;
-     } 
+    } 
       
-
+    .cart-card-container {
+        padding: 2px 16px;
+        margin-bottom: 20px;
+    }
   
-  .cart-card-container {
-    padding: 2px 16px;
-    margin-bottom: 20px;
-  }
+    .cart-card-container h2 {
+        margin-top: 10px;
+    }
   
-  .cart-card-container h2 {
-    margin-top: 10px;
+    .cart-card-container h2, p {
+        margin-bottom: 10px;
+    }
 
-  }
+    .payment{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .payment .cart-form-list-item {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .cart-form-list-item label {
+        margin-top: 4px;
+    }
+    .cart-form-list-item input {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #fff;
+    }
+
+    .payment-alternatives{
+        padding-bottom: 20px;
+        list-style: none;
+    }
+    .payment-alt-item {
+        display: flex;
+        justify-content: flex-start;
+    }
+    .payment-alt-item input {
+        width: fit-content;
+        margin-right: 6px;
+        margin-top: 2px;
+    }
+
+    .cart-button{
+        display: block;
+        width: 700px;
+    }
   
-  .cart-card-container h2, p {
-    margin-bottom: 10px;
-  }
-
-
-  .payment{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .payment .cart-form-list-item {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.cart-form-list-item label {
-    margin-top: 4px;
-}
-.cart-form-list-item input {
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #fff;
-}
-
-.payment-alternatives{
-    padding-bottom: 20px;
-    list-style: none;
-}
-.payment-alt-item {
-    display: flex;
-    justify-content: flex-start;
-}
-.payment-alt-item input {
-    width: fit-content;
-    margin-right: 6px;
-    margin-top: 2px;
-}
-
-  .cart-button{
-    display: block;
-    width: 700px;
-
-
-  }
+    .summary{
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 30px;
+    }
   
-  .summary{
-    border-collapse: collapse;
-    width: 100%;
-    margin-bottom: 30px;
-  }
-  
-  .summary th,
-   .summary td {
-    border: 1px solid #000;
-    padding: 10px;
-    text-align: center;
+    .summary th,
+    .summary td {
+        border: 1px solid #000;
+        padding: 10px;
+        text-align: center;
   }
   
-  .summary th {
-    background-color: #f0f0f0;
-    font-weight: bold;
-  }
+    .summary th {
+        background-color: #f0f0f0;
+        font-weight: bold;
+    }
   
-  .summary tr:nth-child(odd) {
-    background-color: #e0e0e0;
-  }
+    .summary tr:nth-child(odd) {
+        background-color: #e0e0e0;
+    }
 
-  .receit-card{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    background-color: white;
-    color: black;
-    text-align: center;
-    width: 90%;
-    margin: 0 auto;
-    padding: 20px 10px;
-}
+    .receit-card{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        background-color: white;
+        color: black;
+        text-align: center;
+        width: 90%;
+        margin: 0 auto;
+        padding: 20px 10px;
+    }
   
     /*Footer*/
     .footer {
@@ -728,7 +716,7 @@ textarea{
     
     .footer > * {
         width: 50%;
-    }
+        }
     
     
 
