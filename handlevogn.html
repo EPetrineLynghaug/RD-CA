@@ -1,137 +1,139 @@
 <!DOCTYPE html>
 <html lang="nb">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Handlevogn.">
-    <meta name="author" content="Petrine Lynghaug">
-    <link rel="stylesheet" href="./stylesheet/style.css">
-    <script src="https://kit.fontawesome.com/2cbc9be9a4.js" crossorigin="anonymous"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Handlevogn." />
+    <meta name="author" content="Petrine Lynghaug" />
+    <link rel="stylesheet" href="./stylesheet/style.css" />
+    <script
+      src="https://kit.fontawesome.com/2cbc9be9a4.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Handlevogn|Rainydays</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <div class="logo">
-          <a href="index.html">
-            <img src="./media/RainyDays_Logo.png" alt="Rainydays logo" />
-          </a>
-        </div>
-  
-        <div class="mobile-menu">
+      <div class="logo">
+        <a href="index.html">
+          <img src="./media/RainyDays_Logo.png" alt="Rainydays logo" />
+        </a>
+      </div>
+
+      <div class="mobile-menu">
         <i class="menu-icon fa-solid fa-cart-shopping" id="cart-icon"></i>
         <label for="hamburger-menu" class="menu-icon">
           <i class="fas fa-bars"></i> Meny
         </label>
-        </div>
-  
-        <input type="checkbox" id="hamburger-menu">
-        <nav class="meny meny-desktop">
-          <ul class="menu-list">
-            <li class="menu-item">
-              <a href="./index.html" class="active">Hjem</a>
-            </li>
-            <li class="menu-item"><a href="./jakker.html">Herre</a></li>
-            <li class="menu-item"><a href="./jakker.html">Dame</a></li>
-            <li class="menu-item"><a href="./jakker.html">Alle jakker</a></li>
-            <li class="menu-item"><a href="./omoss.html">Om oss</a></li>
-            <li class="menu-item"><a href="./kontaktoss.html">Kontakt</a></li>
-          </ul>
-        </nav>
-      </header>
+      </div>
 
+      <input type="checkbox" id="hamburger-menu" />
+      <nav class="meny meny-desktop">
+        <ul class="menu-list">
+          <li class="menu-item">
+            <a href="./index.html" class="active">Hjem</a>
+          </li>
+          <li class="menu-item"><a href="./jakker.html">Herre</a></li>
+          <li class="menu-item"><a href="./jakker.html">Dame</a></li>
+          <li class="menu-item"><a href="./jakker.html">Alle jakker</a></li>
+          <li class="menu-item"><a href="./omoss.html">Om oss</a></li>
+          <li class="menu-item"><a href="./kontaktoss.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
 
     <main class="cart-page">
-        <h1 id="handlevogn">Din handlevogn <sup>(1)</sup></h1>
-        <div class="cart-card">
-            <div class="cart-card-img">
-                <img src="./media/RainyDays_Jacket7.jpg" alt="Avatar">
-            </div>
-            <div class="cart-card-container">
-                <h2><b>Ulriken jakke</b></h2>
-                <p>Farge: olivengrønn</p>
-                <p>Størrelse: S</p>
-            </div>
-        </div> 
-    
-        <h2>Oppsummering</h2>
-        <table class="summary">
-            <tr>
-                <th>Totalsum</th>
-                <th>mellomsum</th>
-                <th>Frakt</th>
-                <th>Mva</th>
-            </tr>
-            <tr>
-                <td>1699.-</td>
-                <td>0,00.-</td>
-                <td>339,8.-</td>
-                <td>1699.-</td>
-            </tr>
-        </table> 
-    
-        <h2>Fullfør kjøp</h2>
-        <form action="./formhandler.html" class="cart">
-            <ul class="cart-form-list">
-                <li class="cart-form-list-item">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="user_name">
-                </li>
-                <li class="cart-form-list-item">
-                    <label for="mail">E-mail</label>
-                    <input type="email" id="mail" name="user_email">
-                </li>
-                <li class="cart-form-list-item">
-                    <label for="adress">Adresse</label>
-                    <input type="text" id="adress" name="user_adress">
-                </li>
-                <li class="cart-form-list-item">
-                    <label for="pc">Postkode</label>
-                    <input type="text" id="pc" name="user_postcode">
-                </li>
-                <li class="cart-form-list-item">
-                    <label for="city">By</label>
-                    <input type="text" id="city" name="user_city">
-                </li>
-                <li class="cart-form-list-item">
-                    <label for="phone">Mobil</label>
-                    <input type="text" id="phone" name="user_phone">
-                </li>
-            </ul>
-        </form>
-    
-        <div class="payment">
-            <h2>Velg betalingsmåte</h2>
-            <ul class="payment-alternatives">
-                <li class="payment-alt-item">
-                    <label for="vipps">Vipps</label>
-                    <input type="checkbox" id="vipps" checked> 
-                </li>
-                <li class="payment-alt-item">
-                    <label for="visam">Visa/Mastercard</label>
-                    <input type="checkbox" id="visam"> 
-                </li>
-                <li class="payment-alt-item">
-                    <label for="klarna">Klarna</label>
-                    <input type="checkbox" id="klarna">
-                </li>
-            </ul>
-            <a href="./kvittering.html" class="product-button product-primary cart-button"><i class="fa-solid fa-cart-plus"></i> Kjøp</a>
+      <h1 id="handlevogn">Din handlevogn <sup>(1)</sup></h1>
+      <div class="cart-card">
+        <div class="cart-card-img">
+          <img src="./media/RainyDays_Jacket7.jpg" alt="Avatar" />
         </div>
-    </main>
-    
+        <div class="cart-card-container">
+          <h2><b>Ulriken jakke</b></h2>
+          <p>Farge: olivengrønn</p>
+          <p>Størrelse: S</p>
+        </div>
+      </div>
 
+      <h2>Oppsummering</h2>
+      <table class="summary">
+        <tr>
+          <th>Totalsum</th>
+          <th>mellomsum</th>
+          <th>Frakt</th>
+          <th>Mva</th>
+        </tr>
+        <tr>
+          <td>1699.-</td>
+          <td>0,00.-</td>
+          <td>339,8.-</td>
+          <td>1699.-</td>
+        </tr>
+      </table>
+
+      <h2>Fullfør kjøp</h2>
+      <form action="./formhandler.html" class="cart">
+        <ul class="cart-form-list">
+          <li class="cart-form-list-item">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="user_name" />
+          </li>
+          <li class="cart-form-list-item">
+            <label for="mail">E-mail</label>
+            <input type="email" id="mail" name="user_email" />
+          </li>
+          <li class="cart-form-list-item">
+            <label for="adress">Adresse</label>
+            <input type="text" id="adress" name="user_adress" />
+          </li>
+          <li class="cart-form-list-item">
+            <label for="pc">Postkode</label>
+            <input type="text" id="pc" name="user_postcode" />
+          </li>
+          <li class="cart-form-list-item">
+            <label for="city">By</label>
+            <input type="text" id="city" name="user_city" />
+          </li>
+          <li class="cart-form-list-item">
+            <label for="phone">Mobil</label>
+            <input type="text" id="phone" name="user_phone" />
+          </li>
+        </ul>
+      </form>
+
+      <div class="payment">
+        <h2>Velg betalingsmåte</h2>
+        <ul class="payment-alternatives">
+          <li class="payment-alt-item">
+            <label for="vipps">Vipps</label>
+            <input type="checkbox" id="vipps" checked />
+          </li>
+          <li class="payment-alt-item">
+            <label for="visam">Visa/Mastercard</label>
+            <input type="checkbox" id="visam" />
+          </li>
+          <li class="payment-alt-item">
+            <label for="klarna">Klarna</label>
+            <input type="checkbox" id="klarna" />
+          </li>
+        </ul>
+        <a
+          href="./kvittering.html"
+          class="product-button product-primary cart-button"
+          ><i class="fa-solid fa-cart-plus"></i> Kjøp</a
+        >
+      </div>
+    </main>
 
     <footer class="footer">
-        <div class>
-            <h3>Kundeservice</h3>
-            <ul class="customer service">
-                <li>Om oss</li>
-                <li>Kontakt oss</li>
-            </ul>
-        </div>
+      <div class>
+        <h3>Kundeservice</h3>
+        <ul class="customer service">
+          <li><a href="./omoss.html">Om oss</a></li>
+          <li><a href="./kontaktoss.html">Kontakt oss</a></li>
+        </ul>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>
