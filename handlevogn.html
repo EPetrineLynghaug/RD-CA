@@ -105,19 +105,20 @@
       <div class="payment">
         <h2>Velg betalingsmåte</h2>
         <ul class="payment-alternatives">
-          <li class="payment-alt-item">
-            <input type="radio" id="vipps" name="vipps" value="vipps" checked>
-            <label for="vipps">Vipps</label>
-          </li>
-          <li class="payment-alt-item">
-            <label for="visam">Visa/Mastercard</label>
-            <input type="checkbox" id="visam" />
-          </li>
-          <li class="payment-alt-item">
-            <label for="klarna">Klarna</label>
-            <input type="checkbox" id="klarna" />
-          </li>
+            <li class="payment-alt-item">
+                <input type="radio" id="vipps" name="payment" value="vipps" checked>
+                <label for="vipps">Vipps</label>
+            </li>
+            <li class="payment-alt-item">
+                <input type="radio" id="visa-mastercard" name="payment" value="visa-mastercard">
+                <label for="visa-mastercard">Visa/Mastercard</label>
+            </li>
+            <li class="payment-alt-item">
+                <input type="radio" id="klarna" name="payment" value="klarna">
+                <label for="klarna">Klarna</label>
+            </li>
         </ul>
+    </div>
         <a
           href="./kvittering.html"
           class="product-button product-primary cart-button"
