@@ -433,7 +433,6 @@ a.product-button {
       }
       .newsletter-actions * {
         font-size: 15px;
-        /* line-height: 50px; */
         display: flex;
         align-items: center;
       }
