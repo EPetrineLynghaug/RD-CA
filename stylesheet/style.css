@@ -223,7 +223,7 @@ a.card-button {
     flex-direction: row;
     justify-content: flex-end;
 }
-.product-color-picker{
+/*.product-color-picker{
     width: 50%;
     display: flex;
     flex-direction: row;
@@ -241,7 +241,7 @@ a.card-button {
     margin-right: 6px;
     padding: 12px 0;
     
-}
+}*/
 .product-quantity{
     width: 50%;
     flex-direction: row;
