@@ -223,25 +223,7 @@ a.card-button {
     flex-direction: row;
     justify-content: flex-end;
 }
-/*.product-color-picker{
-    width: 50%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 12px 0;
-   
-    
-}
 
-.product-colorpicker-button{
-    width: 24px;
-    height: 24px;
-    border-radius: 100%;
-    margin-right: 6px;
-    padding: 12px 0;
-    
-}*/
 .product-quantity{
     width: 50%;
     flex-direction: row;
@@ -904,8 +886,3 @@ a.product-button {
         }
     
     }
-        
-    
-    
-
-
