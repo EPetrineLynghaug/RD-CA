@@ -6,11 +6,12 @@
     <meta name="description" content="Slitesterke regnjakker." />
     <meta name="author" content="Petrine Lynghaug">
     <link rel="stylesheet" href="./stylesheet/style.css" />
+    <title>Hjem|Rainydays</title>
     <script
       src="https://kit.fontawesome.com/2cbc9be9a4.js"
       crossorigin="anonymous"
     ></script>
-    <title>Hjem|Rainydays</title>
+    <script src="./index.js" defer></script>
   </head>
 
   <body>
@@ -56,115 +57,13 @@
 
       <h2 class="italic">Bestselgere</h2>
 
-      <div class="all-bestseller-cards">
-      <section class="card">
-        <div class="card-image">
-          <a href="./ulriken.html">
-            <img
-              src="./media/RainyDays_Jacket7_1_11zon.jpg"
-              alt="100% wool jacket, sturdy zipper, good pockets on each side."
-            />
-          </a>
+      <div class="all-bestseller-cards" id="productsContainer">
+
+        <div class="loading">
+          <span>Laster produkter...</span>
         </div>
 
-        <div class="card-content">
-          <h2>Ulriken 100% ulljakke <small>-kr 1699.-</small></h2>
-          <p class="card-description">
-            Møt "Ulriken 100% ull" - vår lokale stolthet. Håndlaget i Bergen,
-            denne jakken er både tradisjonell og førsteklasses. Laget av
-            førsteklasses ull, gir den varme og stil til eventyrene dine. Med
-            vår dedikasjon til lokal produksjon får du en jakke som beskytter
-            mot elementene, uansett hvor du går i Bergen. Velg "Ulriken 100%
-            ull" for varme, stil og tilknytning til vår kulturarv. En jakke som
-            er like egnet for fjellturer som for bylivet.
-          </p>
-          <div class="card-actions">
-            <div class="card-quantity">
-              <label for="sizes1">Størrelse</label>
-              <select name="size" id="sizes1">
-                <option value="xs">XS</option>
-                <option value="small">Small</option>
-                <option value="medium">Medium</option>
-                <option value="large">Large</option>
-                <option value="x-large">X-Large</option>
-              </select>
-            </div>
-            <a href="./ulriken.html" class="card-button button-secondary">Vis produkt</a>
-            <a href="./ulriken.html" class="product-button product-primary">
-             <i class="fa-solid fa-cart-plus"></i>Kjøp</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="card">
-        <div class="card-image">
-          <a href="./ulriken.html">
-            <img
-              src="./media/RainyDays_Jacket2_2_11zon.jpg"
-              alt="Running jacket in gray with white details, breathable and waterproof."
-            />
-          </a>
-        </div>
-        <div class="card-content">
-          <h2>Scott løpejakke <small>-kr 899.-</small></h2>
-          <p class="card-description">
-            Scott løpejakken - din ultimate treningspartner. Lett, pustende og
-            komfortabel. Smart lommeplassering og reflekterende logo for økt
-            synlighet. Oppnå topp ytelse uansett hvor du løper.
-          </p>
-          <div class="card-actions">
-            <div class="card-quantity">
-              <label for="sizes2">Størrelse</label>
-              <select name="size" id="sizes2">
-                <option value="xs">XS</option>
-                <option value="small">Small</option>
-                <option value="medium">Medium</option>
-                <option value="large">Large</option>
-                <option value="x-large">X-Large</option>
-              </select>
-            </div>
-            <a href="./ulriken.html" class="card-button button-secondary"
-              >Vis produkt</a>
-            <a href="./ulriken.html" class="product-button product-primary"
-              ><i class="fa-solid fa-cart-plus"></i> Kjøp</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="card">
-        <div class="card-image">
-          <a href="./ulriken.html">
-            <img
-              src="./media/RainyDays_Jacket3.jpg"
-              alt="Red cycling jacket with black details.A sturdy zipper, and thumbholes."
-            />
-          </a>
-        </div>
-        <div class="card-content">
-          <h2>Fløyen sykkeljakke <small>-kr 1400.-</small></h2>
-          <p class="card-description">
-            Fløyen sykkeljakken - din optimale sykkelkamerat. Lett, luftig og
-            komfortabel. Praktisk lommeplassering og en reflekterende logo for
-            bedre synlighet. Oppnå topp ytelse uansett hvor du tråkker.
-          </p>
-          <div class="card-actions">
-            <div class="card-quantity">
-              <label for="sizes3">Størrelse</label>
-              <select name="size" id="sizes3">
-                <option value="xs">XS</option>
-                <option value="small">Small</option>
-                <option value="medium">Medium</option>
-                <option value="large">Large</option>
-                <option value="x-large">X-Large</option>
-              </select>
-            </div>
-            <a href="./ulriken.html" class="card-button button-secondary">Vis produkt</a>
-            <a href="./ulriken.html" class="product-button product-primary"
-              ><i class="fa-solid fa-cart-plus"></i> Kjøp</a>
-          </div>
-        </div>
-      </section>
-
+      </div>  
       <div class="heroto">
         <div class="heroactions heroto-overlay">
           <a href="./jakker.html" class="button">Se alle jakker</a>
@@ -182,7 +81,6 @@
           </a>
         </div>
       </div>
-    </div>  
     </main>
 
     <footer class="footer">
