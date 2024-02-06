@@ -46,6 +46,16 @@ h2{
 .hidden {
     display: none;
 }
+.price {
+    width: 100%;
+    margin-bottom: 12px;
+    text-align: center;
+    font-weight: 700;
+}
+.before-price {
+    color: red;
+    font-weight: 400;
+}
 
 
 .italic{

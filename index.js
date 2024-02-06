@@ -25,7 +25,7 @@ async function getProducts() {
             console.log(products)
 
             // Create product cards
-            displayProducts(products);
+            displayProducts(products.slice(0, 4));
 
             // Hide loading
             loading.classList.add('hidden');
@@ -66,17 +66,14 @@ function displayProducts(products) {
 </div>
 
 <div class="card-content">
-    <h2>${product.title}<small> ${product.price},- kr</small></h2>
+    <h2>${product.title}</h2>
+    <div class="price">${product.onSale ? productPrice(product.price, product.discountedPrice) : product.price},- kr</div>
     <p class="card-description">${product.description}</p>
     <div class="card-actions">
     <div class="card-quantity">
-        <label for="sizes1">Størrelse</label>
+        <label for="sizes1">Størrelse</label> 
         <select name="size" id="sizes1">
-        <option value="xs">XS</option>
-        <option value="small">Small</option>
-        <option value="medium">Medium</option>
-        <option value="large">Large</option>
-        <option value="x-large">X-Large</option>
+            ${product.sizes.map(size => listSizes(size))}
         </select>
     </div>
     <a href="./ulriken.html" class="card-button button-secondary">Vis produkt</a>
@@ -87,4 +84,12 @@ function displayProducts(products) {
 
         prodContainer.append(card);
     });
+}
+
+function productPrice(price, discountedPrice) {
+    return `SALG: <s class="before-price">${price}</s> ${discountedPrice}`;
+}
+
+function listSizes(size) {
+    return `<option value="${size}">${size}</option>`;
 }
