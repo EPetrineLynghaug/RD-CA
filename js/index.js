@@ -1,6 +1,6 @@
 // import
-import displayProducts, { viewProduct } from "./product.js";
-import { token, baseUrl } from './constants.js';
+import displayProducts from "./product.js";
+import { token, baseUrl, prodContainer } from './constants.js';
 
 // Laget variabler for API og token
 const loading = document.querySelector('.loading');
@@ -24,7 +24,7 @@ async function getProducts() {
             console.log(products)
 
             // Create product cards
-            displayProducts(products.slice(0, 4));
+            displayProducts(products.slice(0, 4), prodContainer);
 
             // Hide loading
             loading.classList.add('hidden');
