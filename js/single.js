@@ -1,4 +1,5 @@
 import { baseUrl, token, mainContainer } from "./constants.js";
+import { addToCart } from "./add-to-cart.js";
 
 //let params = new URLSearchParams(document.location.search);
 let params = new URL(document.location).searchParams;
@@ -21,6 +22,8 @@ async function getProduct() {
             console.log(product);
 
             mainContainer.innerHTML = displayProduct(product);
+
+            addToCartEventlistener();
         } else {
             displayError('Kunne ikke hente produkter');
         }
@@ -67,52 +70,35 @@ function displayProduct(product) {
                         ${product.sizes.map(size => listSizes(size))}
                     </select>
                 </div>
-                <a href="./handlevogn.html" class="product-button product-primary">
-                    <i class="fa-solid fa-cart-plus"></i> Kjøp
-                </a>
+                ${addToCartButton()}
             </div>
         </div>
     </section>`;
 }
+
 function listSizes (size){
     return `<option value="${size}">${size}</option>`;
 }
-{/* <section class="product">
-    <div class="product-image">
-        <a href="./ulriken.html">
-        <img
-            src="./media/RainyDays_Jacket7_1_11zon.jpg"
-            alt="Green 100% wool jacket, sturdy zipper, good pockets on each side. Unisex model. Also available in black and red"
-        />
-        </a>
-    </div>
-    <div class="product-content">
-        <div>
-            <h1>Ulriken 100% ulljakke <small>-kr 1699.-</small></h1>
-            <p class="product-actions">
-                Møt "Ulriken 100% ull" - vår lokale stolthet. Håndlaget i Bergen,
-                denne jakken er både tradisjonell og førsteklasses. Laget av
-                førsteklasses ull, gir den varme og stil til eventyrene dine. Med
-                vår dedikasjon til lokal produksjon får du en jakke som beskytter
-                mot elementene, uansett hvor du går i Bergen. Velg "Ulriken 100%
-                ull" for varme, stil og tilknytning til vår kulturarv. En jakke
-                som er like egnet for fjellturer som for bylivet.
-            </p>
-        </div>
-        <div class="product-actions">
-            <div class="product-quantity">
-                <label for="sizes">Størrelse</label>
-                <select name="size" id="sizes">
-                <option value="xs">XS</option>
-                <option value="small">Small</option>
-                <option value="medium">Medium</option>
-                <option value="large">Large</option>
-                <option value="xl">X-Large</option>
-                </select>
-            </div>
-            <a href="./handlevogn.html" class="product-button product-primary">
-                <i class="fa-solid fa-cart-plus"></i> Kjøp
-            </a>
-        </div>
-    </div>
-</section> */}
+
+function addToCartButton() {
+    let button = `<a class="add-to-cart product-button product-primary">
+        <i class="fa-solid fa-cart-plus"></i> Kjøp
+    </a>`;
+
+    return button;
+}
+
+function addToCartEventlistener() {
+    let button = document.querySelector(".add-to-cart");
+
+    button.addEventListener("click", (event) => {
+        event.preventDefault();
+        addToCart(id);
+        window.location = `http://localhost:5501/handlevogn.html`;
+    })
+}
+
+
+function displayError(message) {
+    console.log(message);
+}
