@@ -66,13 +66,8 @@ let totalSummary = {
     total: 0,
 };
 
-
-
-
-
 function summary() {
     productSummary.map((product) => {
-
         if (product.onSale) {
             let moneySaved = (product.price - product.discountedPrice) * product.quantity;
             totalSummary.discount += moneySaved;
