@@ -15,8 +15,10 @@ function getProducts() {
 
             if (response.ok) {
                 const product = await response.json();
+                product.quantity = prod.quantity;
                 productSummary.push(product);
-                addProductToList(product, prod.quantity);
+                addProductToList(product);
+                summary();
             } else {
                 console.log('Kunne ikke hente produkt: ' + product.id);
             }
@@ -29,7 +31,7 @@ function getProducts() {
 
 getProducts();
 
-function addProductToList(product, quantity) {
+function addProductToList(product) {
     let card = document.createElement('div');
     card.classList.add('cart-card');
 
@@ -37,7 +39,7 @@ function addProductToList(product, quantity) {
         <img src="${product.image}" alt="${product.title}" />
         </div>
         <div class="cart-card-container">
-        <h2><b>${product.title} <sup>(${quantity})</sup></b></h2>
+        <h2><b>${product.title} <sup>(${product.quantity})</sup></b></h2>
         <span class="price">kr ${product.price},-</span>
         <p>Farge: olivengrønn</p>
         <p>Størrelse: S (FIX ME!)</p>
@@ -56,3 +58,39 @@ function totalQuantity() {
 };
 
 totalQuantity();
+
+let totalSummary = {
+    discount: 0,
+    delivery: 100,
+    subtotal: 0,
+    total: 0,
+};
+
+
+
+
+
+function summary() {
+    productSummary.map((product) => {
+
+        if (product.onSale) {
+            let moneySaved = (product.price - product.discountedPrice) * product.quantity;
+            totalSummary.discount += moneySaved;
+
+            let subTotal = (product.discountedPrice * 0.75) * product.quantity;
+            totalSummary.subtotal += subTotal;
+
+            let total = product.discountedPrice * product.quantity;
+            totalSummary.total += total;
+        } else {
+            let subTotal = (product.price * 0.75) * product.quantity; 
+            totalSummary.subtotal = subTotal;
+
+            let total = product.price * product.quantity;
+            totalSummary.total += total;
+            totalSummary.total += totalSummary.delivery;
+        }
+    });
+
+    console.log(totalSummary.subtotal.toFixed(2));
+}
