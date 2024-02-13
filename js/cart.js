@@ -79,10 +79,11 @@ function summary() {
             totalSummary.total += total;
         } else {
             let subTotal = (product.price * 0.75) * product.quantity; 
-            totalSummary.subtotal = subTotal;
+            totalSummary.subtotal += subTotal;
 
             let total = product.price * product.quantity;
             totalSummary.total += total;
+
             totalSummary.total += totalSummary.delivery;
         }
     });
