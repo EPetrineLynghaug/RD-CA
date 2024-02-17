@@ -30,16 +30,43 @@ function addToCart(id) {
     setCart(cart);
 }
 
-function removeProd(id) {
-    console.log(id);
-    let cart = getCart();
-
+function removeProd(id, cart) {
     let product = cart.find(prod => prod.id === id);
+    let index = cart.indexOf(product);
 
-    if (product.quantity >= 2) {
-        // quantity--;
-    } else {
-        // splice(index, 1);
+    if (index >= 0) {
+        if (product.quantity >= 2) {
+            let divQuantity = document.getElementById('quantity-' + id);
+
+            let newQuantity = product.quantity - 1;
+            cart[index].quantity = newQuantity;
+            divQuantity.innerText = newQuantity;
+        } else {
+            let divCard = document.getElementById('card-' + id);
+
+            cart.splice(index, 1);
+
+            divCard.remove();
+        }
+
+        setCart(cart);
+        return cart;
+    }
+}
+
+function addProd(id, cart) {
+    let product = cart.find(prod => prod.id === id);
+    let index = cart.indexOf(product);
+
+    if (index >= 0) {
+        let divQuantity = document.getElementById('quantity-' + id);
+
+        let newQuantity = product.quantity + 1;
+        cart[index].quantity = newQuantity;
+        divQuantity.innerText = newQuantity;
+
+        setCart(cart);
+        return cart;
     }
 }
 
@@ -51,4 +78,5 @@ export {
     getCart,
     addToCart,
     removeProd,
+    addProd,
 };

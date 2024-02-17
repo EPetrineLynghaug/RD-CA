@@ -1,4 +1,4 @@
-import { getCart, removeProd } from "./add-to-cart.js";
+import { getCart, removeProd, addProd } from "./add-to-cart.js";
 import { baseUrl, token, divCartList, divCartQuantity, trCartSummary } from "./constants.js";
 
 let cart = getCart();
@@ -19,40 +19,40 @@ function getProducts() {
                 productSummary.push(product);
                 addProductToList(product);
                 summary();
-                removeButtonListener();
+                quantityButtonListener();
             } else {
                 console.log('Kunne ikke hente produkt: ' + product.id);
             }
         });
     } catch (error) {
-        console.log(error);
         console.log('Kunne ikke hente produktene');
+        console.log(error);
     }
 }
 
 getProducts();
 
 function addProductToList(product) {
-    divCartList.innerHTML +=  `<div class="cart-card">
+    divCartList.innerHTML += `<div class="cart-card" id="card-${product.id}">
         <div class="cart-card-img">
-        <img src="${product.image}" alt="${product.title}" />
+            <img src="${product.image}" alt="${product.title}" />
         </div>
         <div class="cart-card-container">
-        <h2><b>${product.title}</b></h2>
-        <span class="price">$ ${product.price}</span>
-        <p>Farge: olivengrønn</p>
-        <div class="cart-actions">
-            <button class="cart-remove-one" data-id="${product.id}">-</button>
-            <div>${product.quantity}</div>
-            <button class="cart-add-one" data-id="${product.id}">+</button>
-        </div>
-        <p>Størrelse: S (FIX ME!)</p>
+            <h2><b>${product.title}</b></h2>
+            <span class="price">$ ${product.price}</span>
+            <p>Farge: olivengrønn</p>
+            <div class="cart-actions">
+                <button class="cart-quantity-action" data-id="${product.id}">-</button>
+                <div id="quantity-${product.id}">${product.quantity}</div>
+                <button class="cart-quantity-action" data-id="${product.id}">+</button>
+            </div>
+            <p>Størrelse: S (FIX ME!)</p>
         </div>
     </div>`;
 }
 
-function removeButtonListener() {
-    let buttons = document.querySelectorAll('.cart-remove-one');
+function quantityButtonListener() {
+    let buttons = document.querySelectorAll('.cart-quantity-action');
 
     buttons.forEach(btn => {
         btn.addEventListener('click', (event) => {
@@ -60,7 +60,11 @@ function removeButtonListener() {
 
             let id = btn.getAttribute('data-id');
 
-            removeProd(id);
+            if (btn.innerText === "-") {
+                cart = removeProd(id, cart);
+            } else {
+                cart = addProd(id, cart);
+            }
         });
     });
 }
@@ -105,8 +109,6 @@ function summary() {
         }
     });
 
-    console.log(totalSummary.subtotal.toFixed(2));
- 
     trCartSummary.innerHTML = `
     <td>$ ${totalSummary.discount.toFixed(2)}</td>
     <td>$ ${totalSummary.subtotal.toFixed(2)}</td>

@@ -21,7 +21,6 @@ async function getProducts() {
         if (response.ok) {
             // Data parsed with .json()
             const products = await response.json();
-            console.log(products)
 
             // Create product cards
             displayProducts(products.slice(0, 4), prodContainer);
