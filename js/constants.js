@@ -6,6 +6,7 @@ const prodContainer = document.getElementById('productsContainer');
 const mainContainer = document.getElementById('main');
 const divCartList = document.querySelector('.cart-list');
 const divCartQuantity = document.querySelector('.cart-total-quantity');
+const trCartSummary = document.querySelector('#cart-summary');
 
 export {
     token,
@@ -14,4 +15,5 @@ export {
     mainContainer,
     divCartList,
     divCartQuantity,
+    trCartSummary,
 };

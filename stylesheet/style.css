@@ -56,6 +56,20 @@ h2{
     color: red;
     font-weight: 400;
 }
+.cart-actions {
+    display: flex;
+    align-items: center;
+}
+.cart-actions > * {
+    width: 36px;
+    height: 24px;
+    font-weight: bold;
+}
+.cart-actions div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 
 .italic{

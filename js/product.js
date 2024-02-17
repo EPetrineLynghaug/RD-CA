@@ -1,5 +1,9 @@
+import { addToFavorites, productIsFavorite } from "./favorites.js";
+
 function displayProducts(products, prodContainer) {
     products.map(product => {
+        let isFavorite = productIsFavorite(product.id);
+
         let card = document.createElement('section');
         card.classList.add('card');
 
@@ -13,6 +17,9 @@ function displayProducts(products, prodContainer) {
         </div>
 
         <div class="card-content">
+            <button class="favorite" data-id="${product.id}">
+                ${isFavorite ? "Fjern fra favoritter" : "Legg til i favoritter"}
+            </button>
             <h2>${product.title}</h2>
             <div class="price">${product.onSale ? productPrice(product.price, product.discountedPrice) : product.price},- kr</div>
             <p class="card-description">${product.description}</p>
@@ -34,6 +41,7 @@ function displayProducts(products, prodContainer) {
     });
 
     showProductsListener();
+    addToFavorites();
 }
 
 function productPrice(price, discountedPrice) {

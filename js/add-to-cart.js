@@ -30,6 +30,15 @@ function addToCart(id) {
     setCart(cart);
 }
 
+function removeProd(id) {
+    console.log(id);
+    let cart = getCart();
+
+    let product = cart.find(prod => prod.id === id);
+
+    console.log(product);
+}
+
 function setCart(cart) {
     localStorage.setItem('rd_cart', JSON.stringify(cart));
 }
@@ -37,4 +46,5 @@ function setCart(cart) {
 export {
     getCart,
     addToCart,
+    removeProd,
 };
