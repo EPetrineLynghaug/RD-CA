@@ -36,7 +36,11 @@ function removeProd(id) {
 
     let product = cart.find(prod => prod.id === id);
 
-    console.log(product);
+    if (product.quantity >= 2) {
+        // quantity--;
+    } else {
+        // splice(index, 1);
+    }
 }
 
 function setCart(cart) {
