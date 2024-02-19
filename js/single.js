@@ -1,46 +1,18 @@
-import { baseUrl, token, mainContainer } from "./constants.js";
+import { mainContainer } from "./constants.js";
 import { addToCart } from "./add-to-cart.js";
+import { getSingleProduct } from "./api.js";
 
 //let params = new URLSearchParams(document.location.search);
 let params = new URL(document.location).searchParams;
 let id = params.get("id"); 
 
-async function getProduct() {
-    try {
-        // Prøv å hente produkter
-
-        // Fetch request (RAW data)
-        const response = await fetch(`${baseUrl}/${id}`, {
-            headers: {
-                'Authorization': `Bearer ${token}`
-            }
-        });
-
-        if (response.ok) {
-            // Data parsed with .json()
-            const product = await response.json();
-            console.log(product);
-
-            mainContainer.innerHTML = displayProduct(product);
-
-            addToCartEventlistener();
-        } else {
-            displayError('Kunne ikke hente produkter');
-        }
-
-        // TODO: Lag produkt kort
-
-    } catch (error) {
-        // Error hvis request feilet
-
-        displayError('Noe gikk galt...');
-
-        // TODO: Håndter error/vis error til bruker
-
-    }
+async function init() {
+    let product = await getSingleProduct(id);
+    mainContainer.innerHTML = displayProduct(product);
+    addToCartEventlistener();
 }
 
-getProduct();
+init();
 
 function displayProduct(product) {
     return `<section class="product">
@@ -66,7 +38,6 @@ function displayProduct(product) {
                 <div class="product-quantity">
                     <label for="sizes">Størrelse</label>
                     <select name="size" id="sizes">
-                        <option value="xs">XS</option>
                         ${product.sizes.map(size => listSizes(size))}
                     </select>
                 </div>
@@ -93,7 +64,10 @@ function addToCartEventlistener() {
 
     button.addEventListener("click", (event) => {
         event.preventDefault();
-        addToCart(id);
+
+        let selectedSize = document.querySelector('#sizes').value;
+        
+        addToCart(id, selectedSize);
         window.location = `http://localhost:5501/handlevogn.html`;
     })
 }

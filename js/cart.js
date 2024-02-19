@@ -1,33 +1,22 @@
 import { getCart, removeProd, addProd } from "./add-to-cart.js";
 import { baseUrl, token, divCartList, divCartQuantity, trCartSummary } from "./constants.js";
+import { getSingleProduct } from "./api.js";
 
 let cart = getCart();
 let productSummary = [];
 
 function getProducts() {
-    try{
-        cart.map(async (prod) => {
-            const response = await fetch(`${baseUrl}/${prod.id}`, {
-                headers: {
-                    'Authorization': `Bearer${token}`
-                } 
-            });
+    cart.map(async (item) => { // item = { id, size, quantity }
+        let product = await getSingleProduct(item.id);
 
-            if (response.ok) {
-                const product = await response.json();
-                product.quantity = prod.quantity;
-                productSummary.push(product);
-                addProductToList(product);
-                summary();
-                quantityButtonListener();
-            } else {
-                console.log('Kunne ikke hente produkt: ' + product.id);
-            }
-        });
-    } catch (error) {
-        console.log('Kunne ikke hente produktene');
-        console.log(error);
-    }
+        product.quantity = item.quantity;
+        product.selectedSize = item.size;
+        productSummary.push(product);
+
+        addProductToList(product);
+        calculateTotalSum();
+        quantityButtonListener();
+    });
 }
 
 getProducts();
@@ -46,7 +35,7 @@ function addProductToList(product) {
                 <div id="quantity-${product.id}">${product.quantity}</div>
                 <button class="cart-quantity-action" data-id="${product.id}">+</button>
             </div>
-            <p>Størrelse: S (FIX ME!)</p>
+            <p>Størrelse: ${product.selectedSize}</p>
         </div>
     </div>`;
 }
@@ -65,6 +54,9 @@ function quantityButtonListener() {
             } else {
                 cart = addProd(id, cart);
             }
+
+            calculateTotalSum();
+            totalQuantity();
         });
     });
 }
@@ -87,22 +79,31 @@ let totalSummary = {
     total: 0,
 };
 
-function summary() {
-    productSummary.map((product) => {
+function calculateTotalSum() {
+    totalSummary = {
+        discount: 0,
+        delivery: 100,
+        subtotal: 0,
+        total: 0,
+    };
+
+    cart.map((item) => {
+        let product = productSummary.find((prod) => prod.id === item.id);
+
         if (product.onSale) {
-            let moneySaved = (product.price - product.discountedPrice) * product.quantity;
+            let moneySaved = (product.price - product.discountedPrice) * item.quantity;
             totalSummary.discount += moneySaved;
 
-            let subTotal = (product.discountedPrice * 0.75) * product.quantity;
+            let subTotal = (product.discountedPrice * 0.75) * item.quantity;
             totalSummary.subtotal += subTotal;
 
-            let total = product.discountedPrice * product.quantity;
+            let total = product.discountedPrice * item.quantity;
             totalSummary.total += total;
         } else {
-            let subTotal = (product.price * 0.75) * product.quantity; 
+            let subTotal = (product.price * 0.75) * item.quantity; 
             totalSummary.subtotal += subTotal;
 
-            let total = product.price * product.quantity;
+            let total = product.price * item.quantity;
             totalSummary.total += total;
 
             totalSummary.total += totalSummary.delivery;

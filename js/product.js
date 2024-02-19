@@ -17,23 +17,23 @@ function displayProducts(products, prodContainer) {
         </div>
 
         <div class="card-content">
-            <button class="favorite" data-id="${product.id}">
-                ${isFavorite ? "Fjern fra favoritter" : "Legg til i favoritter"}
-            </button>
             <h2>${product.title}</h2>
             <div class="price">${product.onSale ? productPrice(product.price, product.discountedPrice) : product.price},- kr</div>
             <p class="card-description">${product.description}</p>
             <div class="card-actions">
-                <div class="card-quantity">
-                    <label for="sizes1">Størrelse</label> 
-                    <select name="size" id="sizes1">
-                        ${product.sizes.map(size => listSizes(size))}
-                    </select>
-                </div>
-                ${createButton('Vis produkt', 'show-product card-button button-secondary', product.id)}
-                <a class="product-button product-primary">
-                    <i class="fa-solid fa-cart-plus"></i> Kjøp
-                </a>
+                ${createButton(
+                    'Vis produkt',
+                    'show-product card-button button-secondary',
+                    product.id
+                )}
+                ${createButton(
+                    isFavorite 
+                        ? 'Fjern fra favoritter'
+                        : 'Legg til i favoritter',
+                    'favorite product-button product-primary',
+                    product.id
+                )}
+
             </div>
         </div>`;
 

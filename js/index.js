@@ -1,50 +1,14 @@
-// import
+import { getAllProducts } from "./api.js";
 import displayProducts from "./product.js";
-import { token, baseUrl, prodContainer } from './constants.js';
+import { prodContainer } from "./constants.js";
 
-// Laget variabler for API og token
 const loading = document.querySelector('.loading');
 
-// TODO: Lag loading
+async function init() {
+    let products = await getAllProducts();
 
-async function getProducts() {
-    try {
-        // Prøv å hente produkter
-
-        // Fetch request (RAW data)
-        const response = await fetch(baseUrl, {
-            headers: {
-                'Authorization': `Bearer ${token}`
-            }
-        });
-
-        if (response.ok) {
-            // Data parsed with .json()
-            const products = await response.json();
-
-            // Create product cards
-            displayProducts(products.slice(0, 4), prodContainer);
-
-            // Hide loading
-            loading.classList.add('hidden');
-        } else {
-            displayError('Kunne ikke hente produkter');
-        }
-
-        // TODO: Lag produkt kort
-
-    } catch (error) {
-        // Error hvis request feilet
-
-        displayError('Noe gikk galt...');
-
-        // TODO: Håndter error/vis error til bruker
-
-    }
+    displayProducts(products.slice(0, 4), prodContainer);
+    loading.classList.add('hidden');
 }
 
-getProducts();
-
-function displayError(message) {
-    console.log(message);
-}
+init();

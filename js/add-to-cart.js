@@ -10,7 +10,7 @@ function getCart() {
     return cart;
 }
 
-function addToCart(id) {
+function addToCart(id, size) {
     let cart = getCart();
 
     // Finn index av produkt i handlekurv
@@ -21,6 +21,7 @@ function addToCart(id) {
     } else {
         let product = {
             id: id,
+            size: size,
             quantity: 1,
         };
 
