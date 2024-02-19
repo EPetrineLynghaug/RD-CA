@@ -43,7 +43,7 @@ h2{
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 .price {
     width: 100%;
@@ -68,6 +68,23 @@ h2{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.search-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search-container label {
+    font-size: 18px;
+    font-weight: bold;
+}
+.search-container input {
+    padding: 6px;
+    font-size: 16px;
+}
+.search-container > * {
+    margin: 6px;
 }
 
 

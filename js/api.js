@@ -16,6 +16,8 @@ async function getAllProducts() {
             // Data parsed with .json()
             const products = await response.json();
 
+            console.table(products);
+
             return products;
         } else {
             displayError('Kunne ikke hente produkter');

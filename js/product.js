@@ -6,6 +6,7 @@ function displayProducts(products, prodContainer) {
 
         let card = document.createElement('section');
         card.classList.add('card');
+        card.id = `prod-${product.id}`;
 
         card.innerHTML = `<div class="card-image">
             <a href="./ulriken.html">
