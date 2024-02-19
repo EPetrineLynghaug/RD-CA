@@ -33,6 +33,7 @@ function executeSearch() {
 
         console.log(productCard);
 
+        // TODO: Søk etter tittel, pris, kjønn, beskrivelse
         if (product.title.toLowerCase().includes(userInput.toLowerCase())) {
             productCard.classList.remove('hidden');
         } else {
