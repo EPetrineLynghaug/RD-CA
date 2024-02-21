@@ -40,6 +40,9 @@ function debounce(func, timeout = 500) {
 function executeSearch() {
     let userInput = searchBar.value;
 
+    // Oppdater url når man søker
+    window.history.pushState({}, null, `?search=${userInput}`);
+
     products.map((product) => {
         let productCard = document.getElementById(`prod-${product.id}`)
 
