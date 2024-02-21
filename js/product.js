@@ -19,9 +19,11 @@ function displayProducts(products, prodContainer) {
         </div>
 
         <div class="card-content">
-            <h2>${product.title}</h2>
-            <div class="price">$ ${product.onSale ? productPrice(product.price, product.discountedPrice) : product.price}</div>
-            <p class="card-description">${product.description}</p>
+            <div>
+                <h2>${product.title}</h2>
+                <div class="price">$ ${product.onSale ? productPrice(product.price, product.discountedPrice) : product.price}</div>
+                <p class="card-description">${product.description}</p>
+            </div>
             <div class="card-actions">
                 ${createButton(
                     'Vis produkt',

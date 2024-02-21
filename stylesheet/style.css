@@ -161,8 +161,8 @@ h2{
     background-position: center center;
     flex: 4;
     min-height: 250px;
-    max-height: 350px;
-    overflow: hidden;
+    /*max-height: 350px;
+    /*overflow: hidden;*/
     display: flex;
     justify-content: center;
 }
@@ -234,7 +234,6 @@ border-bottom: 1px solid black;
 }
 
 .card-button{
-    /* width: 48%; */
     font-size: 16px;
     border: 2px solid hsla(192, 73%, 15%, 0.85);
     padding: 6px;
@@ -941,3 +940,19 @@ a.product-button {
         }
     
     }
+
+@media screen and (min-width: 1300px) {
+    .all-bestseller-cards .card {
+        padding: 24px;
+    }
+    .all-bestseller-cards .card {
+        width: calc(50% - 24px);
+        max-width: none;
+        margin: 12px;
+    }
+    .all-bestseller-cards .card .card-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
