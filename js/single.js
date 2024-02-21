@@ -1,4 +1,4 @@
-import { mainContainer } from "./constants.js";
+import { mainContainer, loading } from "./constants.js";
 import { addToCart } from "./add-to-cart.js";
 import { getSingleProduct } from "./api.js";
 import {url} from "./constants.js";
@@ -9,8 +9,12 @@ let id = params.get("id");
 
 async function init() {
     let product = await getSingleProduct(id);
-    mainContainer.innerHTML = displayProduct(product);
-    addToCartEventlistener();
+
+    setTimeout(() => {
+        loading.classList.add('hidden');
+        mainContainer.innerHTML = displayProduct(product);
+        addToCartEventlistener();
+    }, 1250);
 }
 
 init();
@@ -29,7 +33,7 @@ function displayProduct(product) {
             <div>
                 <h1>${product.title}</h1>
                 <div class ="price">
-                    ${product.price}
+                    $${product.price}
                 </div>
                 <p class="product-actions">
                    ${product.description} 

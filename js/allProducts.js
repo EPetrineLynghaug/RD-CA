@@ -1,16 +1,19 @@
 import { getAllProducts } from "./api.js";
-import { prodContainer } from "./constants.js";
+import { prodContainer, loading } from "./constants.js";
 import displayProducts from "./product.js";
+import search from "./search.js";
 
-const loading = document.querySelector('.loading');
 const searchBar = document.getElementById('search');
 
 let products = [];
 
 async function init() {
     products = await getAllProducts();
-    displayProducts(products, prodContainer);
-    loading.classList.add('hidden');
+
+    setTimeout(() => {
+        displayProducts(products, prodContainer);
+        loading.classList.add('hidden');
+    }, 1250);
 }
 
 init();
@@ -31,10 +34,8 @@ function executeSearch() {
     products.map((product) => {
         let productCard = document.getElementById(`prod-${product.id}`)
 
-        console.log(productCard);
-
-        // TODO: Søk etter tittel, pris, kjønn, beskrivelse
-        if (product.title.toLowerCase().includes(userInput.toLowerCase())) {
+        // Søk etter tittel, pris, kjønn, beskrivelse
+        if (search(userInput, product)) {
             productCard.classList.remove('hidden');
         } else {
             productCard.classList.add('hidden');
@@ -48,3 +49,4 @@ function searchListener() {
 }
 
 searchListener();
+

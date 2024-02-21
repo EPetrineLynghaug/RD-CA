@@ -1,28 +1,12 @@
 import { getCart, removeProd, addProd } from "./add-to-cart.js";
-import { baseUrl, token, divCartList, divCartQuantity, trCartSummary } from "./constants.js";
+import { divCartList, divCartQuantity, trCartSummary, loading } from "./constants.js";
 import { getSingleProduct } from "./api.js";
 
 let cart = getCart();
 let productSummary = [];
 
-function getProducts() {
-    cart.map(async (item) => { // item = { id, size, quantity }
-        let product = await getSingleProduct(item.id);
-
-        product.quantity = item.quantity;
-        product.selectedSize = item.size;
-        productSummary.push(product);
-
-        addProductToList(product);
-        calculateTotalSum();
-        quantityButtonListener();
-    });
-}
-
-getProducts();
-
 function addProductToList(product) {
-    divCartList.innerHTML += `<div class="cart-card" id="card-${product.id}">
+    return `<div class="cart-card" id="card-${product.id}">
         <div class="cart-card-img">
             <img src="${product.image}" alt="${product.title}" />
         </div>
@@ -117,3 +101,27 @@ function calculateTotalSum() {
     <td>$ ${totalSummary.total.toFixed(2)}</td>
     `
 }
+
+function getProducts() {
+    let cartHTML = '';
+
+    cart.map(async (item) => { // item = { id, size, quantity }
+        let product = await getSingleProduct(item.id);
+
+        product.quantity = item.quantity;
+        product.selectedSize = item.size;
+        productSummary.push(product);
+
+        cartHTML += addProductToList(product);
+    });
+
+    setTimeout(() => {
+        loading.classList.add('hidden');
+        divCartList.innerHTML = cartHTML;
+        quantityButtonListener();
+        calculateTotalSum();
+    }, 1250);
+
+}
+
+getProducts();

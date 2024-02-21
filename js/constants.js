@@ -8,6 +8,7 @@ const mainContainer = document.getElementById('main');
 const divCartList = document.querySelector('.cart-list');
 const divCartQuantity = document.querySelector('.cart-total-quantity');
 const trCartSummary = document.querySelector('#cart-summary');
+const loading = document.querySelector('.loading');
 
 export {
     url,
@@ -18,4 +19,5 @@ export {
     divCartList,
     divCartQuantity,
     trCartSummary,
+    loading,
 };
