@@ -1,7 +1,7 @@
 import { mainContainer, loading } from "./constants.js";
 import { addToCart } from "./add-to-cart.js";
 import { getSingleProduct } from "./api.js";
-import {url} from "./constants.js";
+import { url } from "./constants.js";
 
 //let params = new URLSearchParams(document.location.search);
 let params = new URL(document.location).searchParams;

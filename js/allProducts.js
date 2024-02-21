@@ -5,6 +5,10 @@ import search from "./search.js";
 
 const searchBar = document.getElementById('search');
 
+//let params = new URLSearchParams(document.location.search);
+let params = new URL(document.location).searchParams;
+let urlSearchParam = params.get("search"); 
+
 let products = [];
 
 async function init() {
@@ -13,6 +17,11 @@ async function init() {
     setTimeout(() => {
         displayProducts(products, prodContainer);
         loading.classList.add('hidden');
+
+        if (urlSearchParam) {
+            searchBar.value = urlSearchParam;
+            executeSearch();
+        }
     }, 1250);
 }
 
