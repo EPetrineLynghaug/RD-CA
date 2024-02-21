@@ -1,4 +1,5 @@
 import { addToFavorites, productIsFavorite } from "./favorites.js";
+import { url }from "./constants.js";
 
 function displayProducts(products, prodContainer) {
     products.map(product => {
@@ -70,7 +71,7 @@ function showProductsListener() {
 
             let id = button.getAttribute('data-id');
 
-            window.location = `http://localhost:5501/ulriken.html?id=${id}`;
+            window.location = `${url}/ulriken.html?id=${id}`;
         });
     });
 }
