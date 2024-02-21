@@ -76,8 +76,3 @@ function addToCartEventlistener() {
         window.location = `${url}/handlevogn.html`;
     });
 }
-
-
-function displayError(message) {
-    console.log(message);
-}

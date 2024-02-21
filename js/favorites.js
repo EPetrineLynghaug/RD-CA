@@ -48,7 +48,6 @@ function addToFavorites() {
             }
 
             localStorage.setItem('rd_fav', JSON.stringify(favoriteArray));
-            console.log(favoriteArray);
         });
     });
 }

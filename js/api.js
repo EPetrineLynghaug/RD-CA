@@ -16,8 +16,6 @@ async function getAllProducts() {
             // Data parsed with .json()
             const products = await response.json();
 
-            console.table(products);
-
             return products;
         } else {
             displayError('Kunne ikke hente produkter');
@@ -25,7 +23,7 @@ async function getAllProducts() {
 
     } catch (error) {
         // Error hvis request feilet
-        displayError('Noe gikk galt...');
+        displayError(error);
     }
 }
 
@@ -54,7 +52,7 @@ async function getSingleProduct(id) {
     } catch (error) {
         // Error hvis request feilet
 
-        displayError('Noe gikk galt...');
+        displayError(error);
 
         // TODO: Håndter error/vis error til bruker
 
@@ -62,7 +60,7 @@ async function getSingleProduct(id) {
 }
 
 function displayError(message) {
-    console.log(message);
+    console.error(message);
 }
 
 export {
