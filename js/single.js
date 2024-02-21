@@ -1,6 +1,7 @@
 import { mainContainer } from "./constants.js";
 import { addToCart } from "./add-to-cart.js";
 import { getSingleProduct } from "./api.js";
+import {url} from "./constants.js";
 
 //let params = new URLSearchParams(document.location.search);
 let params = new URL(document.location).searchParams;
@@ -68,8 +69,8 @@ function addToCartEventlistener() {
         let selectedSize = document.querySelector('#sizes').value;
         
         addToCart(id, selectedSize);
-        window.location = `http://localhost:5501/handlevogn.html`;
-    })
+        window.location = `${url}/handlevogn.html`;
+    });
 }
 
 
