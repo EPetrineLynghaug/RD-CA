@@ -12,7 +12,7 @@ function addProductToList(product) {
         </div>
         <div class="cart-card-container">
             <h2><b>${product.title}</b></h2>
-            <span class="price">$ ${product.price}</span>
+            <span class="price">$ ${product.onSale ? product.discountedPrice : product.price}</span>
             <p>Farge: olivengrønn</p>
             <div class="cart-actions">
                 <button class="cart-quantity-action" data-id="${product.id}">-</button>

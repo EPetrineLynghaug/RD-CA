@@ -121,6 +121,40 @@ h2{
     color: #FFF;
     font-size: 12px;
 }
+#checkoutPage {
+    display: flex;
+    justify-content: center;
+    padding: 12px;
+}
+.checkout-card {
+    width: 100%;
+    max-width: 800px;
+    height: fit-content;
+    margin-top: 50px;
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 3px 6px rgba(0,0,0,.24);
+    border-radius: 6px;
+    overflow: hidden;
+}
+.checkout-card > * {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+}
+.checkout-card .card-head {
+    background-color: hsla(192, 73%, 15%, 0.85);
+    color: #fff;
+}
+.checkout-card .card-body {
+    align-items: flex-start;
+    overflow-x: scroll;
+}
+.checkout-card .card-body tr th {
+    min-width: 100px;
+}
+.checkout-card .card-body tr th:nth-child(2) {
+    min-width: 200px;
+}
 
 
 .italic{

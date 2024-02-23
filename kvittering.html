@@ -11,7 +11,7 @@
       crossorigin="anonymous"
     ></script>
     <title>Kvittering|Rainydays</title>
-    <script src="./js/clearCart.js"></script>
+    <script src="./js/checkout.js" type="module"></script>
   </head>
   <body>
     <header>
@@ -50,11 +50,73 @@
         </nav>
       </div>
     </header>
-    <main>
-      <div class="receit-card">
-        <h1>Bestilling motatt</h1>
-        <p>Takk for din bestilling, kvittering kommer på mail.</p>
+    <main id="checkoutPage">
+
+      <div class="checkout-card">
+
+        <div class="card-head">
+          <h1>Bestilling motatt</h1>
+          <i>
+            Takk for din bestilling, kvittering kommer på mail.
+          </i>
+        </div>
+
+        <div class="card-body">
+          <table class="summary">
+            <thead>
+              <tr>
+                <th>Bilde</th>
+                <th>Tittel</th>
+                <th>Størrelse</th>
+                <th>Antall</th>
+                <th>Pris</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody id="checkoutTbody">
+              <div class="loading">
+                <div class="loader triangle">
+                    <svg viewBox="0 0 86 80">
+                        <polygon points="43 8 79 72 7 72"></polygon>
+                    </svg>
+                </div>
+                <span class="loading-text">
+                  Laster produkter
+                </span>
+              </div>
+            </tbody>
+          </table>
+
+          <table class="summary">
+            <thead>
+              <tr>
+                <th>Rabatt</th>
+                <th>Uten MAV</th>
+                <th>Frakt</th>
+                <th>Totalsum</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id="cart-summary">
+                <!-- <td>1699.-</td>
+                <td>0,00.-</td>
+                <td>339,8.-</td>
+                <td>1699.-</td> -->
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <div class="card-foot">
+          <a href="./index.html" class="button">
+            <b>
+              Tilbake til forsiden
+            </b>
+          </a>
+        </div>
+
       </div>
+
     </main>
 
     <footer class="footer">

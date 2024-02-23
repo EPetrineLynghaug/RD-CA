@@ -10,6 +10,7 @@ const divCartQuantity = document.querySelector('.cart-total-quantity');
 const trCartSummary = document.querySelector('#cart-summary');
 const loading = document.querySelector('.loading');
 const spanCartBadge = document.getElementById('cartBadge');
+const checkoutTable = document.getElementById('checkoutTbody');
 
 export {
     url,
@@ -22,4 +23,5 @@ export {
     trCartSummary,
     loading,
     spanCartBadge,
+    checkoutTable,
 };
