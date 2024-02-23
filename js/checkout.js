@@ -22,6 +22,8 @@ function init() {
         loading.classList.add('hidden');
         checkoutTable.innerHTML = cartHTML;
         calculateTotalSum();
+
+        localStorage.clear('rd_cart');
     }, 1250);
 }
 
