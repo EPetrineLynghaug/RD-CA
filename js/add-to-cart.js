@@ -1,3 +1,5 @@
+import updateNavbar from "./navbar.js";
+
 function getCart() {
     let cart = localStorage.getItem('rd_cart');
 
@@ -73,6 +75,7 @@ function addProd(id, cart) {
 
 function setCart(cart) {
     localStorage.setItem('rd_cart', JSON.stringify(cart));
+    updateNavbar();
 }
 
 export {

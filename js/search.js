@@ -6,7 +6,6 @@ function search(input, product) {
     // \s+ matcher alle mellomrom
     input = input.replace(/\s+/g, '');
     
-
     let match = false;
 
     if (product.gender.toLowerCase() == input.toLowerCase()) { match = true }
@@ -36,8 +35,6 @@ function search(input, product) {
 
     return match;
 }
-
-
 
 export default search;
 

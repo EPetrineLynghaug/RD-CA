@@ -96,6 +96,31 @@ h2{
 .search-container > * {
     margin: 6px;
 }
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.cart-link {
+    display: flex;
+    position: relative;
+    color: #000;
+    text-decoration: none;
+}
+.cart-link .badge {
+    z-index: 999;
+    position: absolute;
+    left: -8px;
+    bottom: -8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1px 12px;
+    border-radius: 12px;
+    background: hsla(192, 73%, 15%, 0.85);
+    color: #FFF;
+    font-size: 12px;
+}
 
 
 .italic{
@@ -837,7 +862,6 @@ a.product-button {
 
 @media screen and (min-width: 900px){
     .menu-icon,
-    #cart-icon,
     #hamburger-menu {
         display: none;
     }

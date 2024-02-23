@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./stylesheet/style.css">
     <script src="https://kit.fontawesome.com/2cbc9be9a4.js" crossorigin="anonymous"></script>
     <title>Kontakt oss|Rainydays</title>
+    <script src="./js/navbar.js" type="module"></script>
 </head>
 
 <body>
@@ -19,26 +20,34 @@
           </a>
         </div>
   
-        <div class="mobile-menu">
-        <i class="menu-icon fa-solid fa-cart-shopping" id="cart-icon"></i>
-        <label for="hamburger-menu" class="menu-icon">
-          <i class="fas fa-bars"></i> Meny
-        </label>
-        </div>
+        <div class="nav-wrapper">
+          <a href="./handlevogn.html" class="cart-link">
+            <i class="menu-icon fa-solid fa-cart-shopping" id="cart-icon"></i>
+            <span class="badge" id="cartBadge">
+              0
+            </span>
+          </a>
   
-        <input type="checkbox" id="hamburger-menu">
-        <nav class="meny meny-desktop">
-          <ul class="menu-list">
-            <li class="menu-item">
-              <a href="./index.html" class="active">Hjem</a>
-            </li>
-            <li class="menu-item"><a href="./jakker.html?search=male">Herre</a></li>
-            <li class="menu-item"><a href="./jakker.html?search=female">Dame</a></li>
-            <li class="menu-item"><a href="./jakker.html">Alle jakker</a></li>
-            <li class="menu-item"><a href="./omoss.html">Om oss</a></li>
-            <li class="menu-item"><a href="./kontaktoss.html">Kontakt</a></li>
-          </ul>
-        </nav>
+          <div class="mobile-menu">
+            <label for="hamburger-menu" class="menu-icon">
+              <i class="fas fa-bars"></i> Meny
+            </label>
+          </div>
+  
+          <input type="checkbox" id="hamburger-menu">
+          <nav class="meny meny-desktop">
+            <ul class="menu-list">
+              <li class="menu-item">
+                <a href="./index.html" class="active">Hjem</a>
+              </li>
+              <li class="menu-item"><a href="./jakker.html?search=male">Herre</a></li>
+              <li class="menu-item"><a href="./jakker.html?search=female">Dame</a></li>
+              <li class="menu-item"><a href="./jakker.html">Alle jakker</a></li>
+              <li class="menu-item"><a href="./omoss.html">Om oss</a></li>
+              <li class="menu-item"><a href="./kontaktoss.html">Kontakt</a></li>
+            </ul>
+          </nav>
+        </div>
       </header>
 
     <main>
